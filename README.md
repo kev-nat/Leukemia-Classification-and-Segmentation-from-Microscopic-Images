@@ -962,6 +962,8 @@ Initial experiments with InceptionResNetV2 as it shown in a figure above promisi
 </p>
 
 <h4 style="text-align: center"> Final Optimized InceptionResNetV2 Classification Report</h4>
+
+<div align="center">
 <table>
   <thead>
     </tr>
@@ -1025,7 +1027,7 @@ Initial experiments with InceptionResNetV2 as it shown in a figure above promisi
     </tr>
   </tbody>
 </table>
-
+</div>
 
 <h4 align="center">Final Optimized InceptionResNetV2 Confusion Matrix & ROC Curves</h4>
 <p align="center">
@@ -1033,29 +1035,31 @@ Initial experiments with InceptionResNetV2 as it shown in a figure above promisi
   <img src="https://github.com/user-attachments/assets/eebb1c6a-e5fe-4d8b-8b25-49a19b2cf1a3" width="400" style="margin: 0 10px;" />
 </p>
 
+<p align="justify">
 The detailed performance analysis is further substantiated by the classification report presented in a table above and the confusion matrix, which provides a thorough breakdown of the model's classification performance across different classes. Additionally, the model's discrimination capabilities are visualized through ROC curves, offering a complete perspective of its predictive power. These collective metrics demonstrate the robustness and effectiveness of the optimized model in accurately classifying the target variables. 
+</p>
 
 #### Impact of Data Loading and Key Parameters
 <p align="justify"> The experimental results highlighted optimized data loading strategy and two crucial parameters affecting model performance:
 </p>
 
-- Experimental results demonstrate that Single Global Dataset Creation (Option 2) outperforms Class-Specific Data Preparation (Option 1) in deep learning model training. This superiority stems from three key mechanisms: enhanced randomization, computational optimization, and statistical integrity. SGDC's global shuffling mechanism ensures optimal dataset randomization, generating diverse batch compositions that yield robust gradient updates and improved model generalization. The unified processing approach eliminates redundant operations inherent in class-specific structures, while maintaining natural statistical distributions across training, validation, and test splits. This streamlined methodology not only enhances computational efficiency but also minimizes implementation artifacts that could impair training dynamics, ultimately providing a more robust foundation for deep learning model development.
+- <p align="justify">Experimental results demonstrate that Single Global Dataset Creation (Option 2) outperforms Class-Specific Data Preparation (Option 1) in deep learning model training. This superiority stems from three key mechanisms: enhanced randomization, computational optimization, and statistical integrity. SGDC's global shuffling mechanism ensures optimal dataset randomization, generating diverse batch compositions that yield robust gradient updates and improved model generalization. The unified processing approach eliminates redundant operations inherent in class-specific structures, while maintaining natural statistical distributions across training, validation, and test splits. This streamlined methodology not only enhances computational efficiency but also minimizes implementation artifacts that could impair training dynamics, ultimately providing a more robust foundation for deep learning model development.</p>
   
-- The implementation of dropout proved essential for model regularization, with models showing consistent overfitting tendencies when dropout was omitted (rate = 0). Dropout implementation contributed to model robustness through several key mechanisms. It prevented overfitting by reducing neuron codependency, while simultaneously enhancing generalization capability through forced independent learning. Furthermore, the implementation improved model resilience through distributed feature learning, ensuring more robust feature extraction across the network.
+- <p align="justify">The implementation of dropout proved essential for model regularization, with models showing consistent overfitting tendencies when dropout was omitted (rate = 0). Dropout implementation contributed to model robustness through several key mechanisms. It prevented overfitting by reducing neuron codependency, while simultaneously enhancing generalization capability through forced independent learning. Furthermore, the implementation improved model resilience through distributed feature learning, ensuring more robust feature extraction across the network. </p>
   
-- The learning rate significantly influenced model convergence and stability. Higher learning rates led to training instability, while excessively low rates resulted in slower convergence and potential local minima traps. The relationship between learning rate and batch size emerged as an important consideration, with larger batch sizes generally accommodating higher learning rates due to gradient stability.
+- <p align="justify">The learning rate significantly influenced model convergence and stability. Higher learning rates led to training instability, while excessively low rates resulted in slower convergence and potential local minima traps. The relationship between learning rate and batch size emerged as an important consideration, with larger batch sizes generally accommodating higher learning rates due to gradient stability. </p>
 
 #### Architectural Performance Analysis
 <p align="justify"> The superior performance of InceptionResNetV2 over NASNetLarge can be attributed to several factors:
 </p>
 
-- The current dataset size (4,000 images, 1,000 per class) appears optimally suited for InceptionResNetV2's architecture. However, these results might differ with substantially larger datasets (>7,000 images).
+- <p align="justify"> The current dataset size (4,000 images, 1,000 per class) appears optimally suited for InceptionResNetV2's architecture. However, these results might differ with substantially larger datasets (>7,000 images).</p>
   
-- NASNetLarge's reinforcement learning-based architecture, while sophisticated, may be prone to overfitting on smaller datasets due to its extensive parameter count. Conversely, InceptionResNetV2's combination
+- <p align="justify">NASNetLarge's reinforcement learning-based architecture, while sophisticated, may be prone to overfitting on smaller datasets due to its extensive parameter count. Conversely, InceptionResNetV2's combination of Inception modules and residual connections provides efficient feature extraction while maintaining effective training dynamics.</p>
   
-- The high accuracy achieved with a significant proportion of non-trainable parameters shows effective transfer learning implementation. InceptionResNetV2's architecture appears to better leverage pre-trained features for the specific requirements of leukemia classification.
+- <p align="justify">The high accuracy achieved with a significant proportion of non-trainable parameters shows effective transfer learning implementation. InceptionResNetV2's architecture appears to better leverage pre-trained features for the specific requirements of leukemia classification.</p>
 
-The results demonstrate that well-tuned traditional architectures can outperform modern alternatives, particularly when working with moderate-sized datasets.
+<p align="justify"> The results demonstrate that well-tuned traditional architectures can outperform modern alternatives, particularly when working with moderate-sized datasets. </p>
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/3207775d-fb87-4a4a-a65a-3f4fae625f61" alt="Image 1" width="225" style="margin: 0 10px;" />
