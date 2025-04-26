@@ -23,6 +23,10 @@ The dataset used in this study was obtained from the [Kaggle repository](https:/
 </p>
 
 <div align="center">
+  <h4>An Abstract Overview of the Classification Dataset Used in the Proposed Research</h4>
+</div>
+
+<div align="center">
 <table>
   <thead>
     <tr style="border-top: 2px solid black; border-bottom: 1px solid black;">
@@ -82,6 +86,10 @@ Data augmentation plays a crucial role in enhancing the robustness and generaliz
 </p>
 
 <div align="center">
+  <h4>Comparison of Data Loading Approaches for Model Training</h4>
+</div>
+
+<div align="center">
 <table>
   <thead>
     <tr style="border-top: 2px solid black; border-bottom: 1px solid black;">
@@ -136,6 +144,10 @@ The classification task necessitates a systematic approach to data organization,
 </p>
 
 <div align="center">
+  <h4>Comparison of Different Data Loading Approaches for Model Training</h4>
+</div>
+
+<div align="center">
 <table>
   <thead>
     <tr style="border-top: 2px solid black; border-bottom: 1px solid black;">
@@ -184,7 +196,11 @@ The classification task necessitates a systematic approach to data organization,
 From all these tables it shows 48 experiments comparing InceptionResNetV2 and NASNetLarge architectures for classification. The experiments were performed using a Kaggle notebook with P100 GPU, maintaining consistent parameters across all trials: batch size of 32, 60 epochs, and Adam optimizer. The primary variables investigated were learning rate, dropout rate, and data loading configurations.
 </p>
 
-<h4 style="text-align: center"> Experimental Results of the InceptionResNetV2 Model using Data Loading Option 1</h4>
+<div align="center">
+  <h4>Experimental Results of the InceptionResNetV2 Model using Data Loading Option 1</h4>
+</div>
+
+<div align="center">
 <table>
   <thead>
     <tr>
@@ -359,8 +375,12 @@ From all these tables it shows 48 experiments comparing InceptionResNetV2 and NA
     </tr>
   </tbody>
 </table>
+</div>
 
-<h4 style="text-align: center">Experimental Results of the InceptionResNetV2 Model using Data Loading Option 1</h4>
+<div align="center">
+  <h4>Experimental Results of the NASNetLarge Model using Data Loading Option 1</h4>
+</div>
+
 <table>
   <thead>
     <tr>
@@ -536,7 +556,10 @@ From all these tables it shows 48 experiments comparing InceptionResNetV2 and NA
   </tbody>
 </table>
 
-<h4 style="text-align: center"> Experimental Results of the InceptionResNetV2 Model using Data Loading Option 2</h4>
+<div align="center">
+  <h4>Experimental Results of the InceptionResNetV2 Model using Data Loading Option 2</h4>
+</div>
+
 <table>
   <thead>
     <tr>
@@ -712,7 +735,10 @@ From all these tables it shows 48 experiments comparing InceptionResNetV2 and NA
   </tbody>
 </table>
 
-<h4 style="text-align: center"> Experimental Results of the NASNETLarge Model using Data Loading Option 2</h4>
+<div align="center">
+  <h4>Experimental Results of the NASNetLarge Model using Data Loading Option 2</h4>
+</div>
+
 <table>
   <thead>
     <tr>
@@ -892,7 +918,10 @@ From all these tables it shows 48 experiments comparing InceptionResNetV2 and NA
 All these table shows that the experimental results demonstrate that InceptionResNetV2 consistently outperformed NASNetLarge in classification accuracy. Three critical parameters emerged as significant determinants of model performance: dropout rate, learning rate and data loading configurations. While both architectures achieved high accuracy, the traditional InceptionResNetV2 architecture exhibited superior performance compared to the modern NASNetLarge architecture on the given dataset.
 </p>
 
-<h4 style="text-align: center"> Summary of Model Performance for InceptionResNetV2 and NASNetLarge Across Two Data Loading Options: Row 1 Represents InceptionResNetV2 with Data Loading Option 2, While Row 2 Represents NASNetLarge with Data Loading Option 1.</h4>
+<div align="center">
+  <h4>Summary of Model Performance for InceptionResNetV2 and NASNetLarge Across Two Data Loading Options: Row 1 Represents InceptionResNetV2 with Data Loading Option 2, While Row 2 Represents NASNetLarge with Data Loading Option 1.</h4>
+</div>
+
 <table>
   <thead>
     <tr>
@@ -945,7 +974,10 @@ All these table shows that the experimental results demonstrate that InceptionRe
   </tbody>
 </table>
 
-<h4 align="center">InceptionResNetV2 Accuracy vs Loss graph with 0.0001 Learning Rate and 0 Dropout.</h4>
+<div align="center">
+  <h4>InceptionResNetV2 Accuracy vs Loss graph with 0.0001 Learning Rate and 0 Dropout</h4>
+</div>
+
 <p align="center">
   <img src="https://github.com/user-attachments/assets/f1396a18-d8c7-4f0a-a254-d69b02704b63" width="250" style="margin: 0 10px;" />
   <img src="https://github.com/user-attachments/assets/ec3cafe7-dd1a-4afb-b6f1-eb040b9348dd" width="250" style="margin: 0 10px;" />
@@ -961,7 +993,9 @@ Initial experiments with InceptionResNetV2 as it shown in a figure above promisi
   <img src="https://github.com/user-attachments/assets/83da6fc8-052c-43f0-8cba-b060c210c73b" width="250" style="margin: 0 10px;" />
 </p>
 
-<h4 style="text-align: center"> Final Optimized InceptionResNetV2 Classification Report</h4>
+<div align="center">
+  <h4>Final Optimized InceptionResNetV2 Classification Report</h4>
+</div>
 
 <div align="center">
 <table>
