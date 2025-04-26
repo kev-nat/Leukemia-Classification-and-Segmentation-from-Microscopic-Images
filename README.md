@@ -360,7 +360,7 @@ From all these tables it shows 48 experiments comparing InceptionResNetV2 and NA
   </tbody>
 </table>
 
-<h4 style="text-align: center"> Experimental Results of the NASNETLarge Model using Data Loading Option 1</h4>
+<h4 style="text-align: center">Experimental Results of the InceptionResNetV2 Model using Data Loading Option 1</h4>
 <table>
   <thead>
     <tr>
@@ -399,7 +399,7 @@ From all these tables it shows 48 experiments comparing InceptionResNetV2 and NA
       <td style="text-align: center">1208.86</td>
     </tr>
     <tr>
-      <td style="text-align: center">0.2</td>
+      <td style="text-align: center">0.4</td>
       <td style="text-align: center">0.06</td>
       <td style="text-align: center">0.25</td>
       <td style="text-align: center">0.10</td>
@@ -411,7 +411,7 @@ From all these tables it shows 48 experiments comparing InceptionResNetV2 and NA
       <td style="text-align: center">1208.86</td>
     </tr>
     <tr>
-      <td style="text-align: center">0</td>
+      <td style="text-align: center">0.4</td>
       <td style="text-align: center">0.06</td>
       <td style="text-align: center">0.25</td>
       <td style="text-align: center">0.10</td>
@@ -433,7 +433,7 @@ From all these tables it shows 48 experiments comparing InceptionResNetV2 and NA
       <td style="text-align: center">95.67</td>
       <td style="text-align: center">11.25</td>
       <td style="text-align: center">95.83</td>
-      <td style="text-align: center">95.83</td>
+      <td style="text-align: center">12.82</td>
     </tr>
     <tr>
       <td style="text-align: center">0.2</td>
@@ -477,7 +477,7 @@ From all these tables it shows 48 experiments comparing InceptionResNetV2 and NA
       <td style="text-align: center">0.97</td>
       <td style="text-align: center">0.97</td>
       <td style="text-align: center">0.97</td>
-      <td style="text-align: center">99.82</td>
+      <td style="text-align: center">99.79</td>
       <td style="text-align: center">1.14</td>
       <td style="text-align: center">97.17</td>
       <td style="text-align: center">6.86</td>
@@ -486,8 +486,8 @@ From all these tables it shows 48 experiments comparing InceptionResNetV2 and NA
     </tr>
     <tr>
       <td style="text-align: center">0</td>
-      <td style="text-align: center">0.98	</td>
-      <td style="text-align: center">0.99</td>
+      <td style="text-align: center">0.98</td>
+      <td style="text-align: center">0.98</td>
       <td style="text-align: center">0.98</td>
       <td style="text-align: center">99.93</td>
       <td style="text-align: center">1.07</td>
@@ -535,6 +535,515 @@ From all these tables it shows 48 experiments comparing InceptionResNetV2 and NA
     </tr>
   </tbody>
 </table>
+
+<h4 style="text-align: center"> Experimental Results of the InceptionResNetV2 Model using Data Loading Option 2</h4>
+<table>
+  <thead>
+    <tr>
+      <th colspan="2" style="text-align: center">Parameters</th>
+      <th colspan="3" style="text-align: center">Classification Report</th>
+      <th colspan="2" style="text-align: center">Training Score (%)</th>
+      <th colspan="2" style="text-align: center">Validation Score (%)</th>
+      <th colspan="2" style="text-align: center">Test Score (%)</th>
+    </tr>
+    <tr>
+      <th style="text-align: center">Learning Rate</th>
+      <th style="text-align: center">Dropout</th>
+      <th style="text-align: center">Precision</th>
+      <th style="text-align: center">Recall</th>
+      <th style="text-align: center">F1-Score</th>
+      <th style="text-align: center">Accuracy</th>
+      <th style="text-align: center">Loss</th>
+      <th style="text-align: center">Accuracy</th>
+      <th style="text-align: center">Loss</th>
+      <th style="text-align: center">Accuracy</th>
+      <th style="text-align: center">Loss</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td rowspan="3" style="text-align: center">0.1</td>
+      <td style="text-align: center">0.4</td>
+      <td style="text-align: center">0.06</td>
+      <td style="text-align: center">0.25</td>
+      <td style="text-align: center">0.10</td>
+      <td style="text-align: center">24.64</td>
+      <td style="text-align: center">1214.61	</td>
+      <td style="text-align: center">24.83	</td>
+      <td style="text-align: center">1211.54	</td>
+      <td style="text-align: center">26.83	</td>
+      <td style="text-align: center">1179.31</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">0.2</td>
+      <td style="text-align: center">0.06</td>
+      <td style="text-align: center">0.25</td>
+      <td style="text-align: center">0.10</td>
+      <td style="text-align: center">25.18	</td>
+      <td style="text-align: center">1205.98	</td>
+      <td style="text-align: center">24.83	</td>
+      <td style="text-align: center">1211.54	</td>
+      <td style="text-align: center">24.33	</td>
+      <td style="text-align: center">1219.60</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">0</td>
+      <td style="text-align: center">0.06</td>
+      <td style="text-align: center">0.25</td>
+      <td style="text-align: center">0.10</td>
+      <td style="text-align: center">24.64	</td>
+      <td style="text-align: center">1214.61	</td>
+      <td style="text-align: center">24.83	</td>
+      <td style="text-align: center">1211.54	</td>
+      <td style="text-align: center">26.83	</td>
+      <td style="text-align: center">1179.31</td>
+    </tr>
+    <tr>
+      <td rowspan="3" style="text-align: center">0.01</td>
+      <td style="text-align: center">0.4</td>
+      <td style="text-align: center">0.07</td>
+      <td style="text-align: center">0.25</td>
+      <td style="text-align: center">0.10</td>
+      <td style="text-align: center">24.89	</td>
+      <td style="text-align: center">1210.58	</td>
+      <td style="text-align: center">26.67	</td>
+      <td style="text-align: center">1181.99	</td>
+      <td style="text-align: center">23.83	</td>
+      <td style="text-align: center">1227.66</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">0.2</td>
+      <td style="text-align: center">0.06	</td>
+      <td style="text-align: center">0.25	</td>
+      <td style="text-align: center">0.10	</td>
+      <td style="text-align: center">25.29	</td>
+      <td style="text-align: center">1204.25	</td>
+      <td style="text-align: center">23.67	</td>
+      <td style="text-align: center">1230.35	</td>
+      <td style="text-align: center">25.00	</td>
+      <td style="text-align: center">1208.86</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">0</td>
+      <td style="text-align: center">0.98</td>
+      <td style="text-align: center">0.98</td>
+      <td style="text-align: center">0.98</td>
+      <td style="text-align: center">99.75	</td>
+      <td style="text-align: center">0.93	</td>
+      <td style="text-align: center">98.00	</td>
+      <td style="text-align: center">5.61	</td>
+      <td style="text-align: center">98.17	</td>
+      <td style="text-align: center">5.97</td>
+    </tr>
+    <tr>
+      <td rowspan="3" style="text-align: center">0.001</td>
+      <td style="text-align: center">0.4</td>
+      <td style="text-align: center">0.98</td>
+      <td style="text-align: center">0.98</td>
+      <td style="text-align: center">0.98</td>
+      <td style="text-align: center">98.89	</td>
+      <td style="text-align: center">3.55	</td>
+      <td style="text-align: center">97.67	</td>
+      <td style="text-align: center">6.04	</td>
+      <td style="text-align: center">97.33	</td>
+      <td style="text-align: center">6.03</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">0.2</td>
+      <td style="text-align: center">0.98</td>
+      <td style="text-align: center">0.98</td>
+      <td style="text-align: center">0.98</td>
+      <td style="text-align: center">99.50	</td>
+      <td style="text-align: center">2.10	</td>
+      <td style="text-align: center">98.17	</td>
+      <td style="text-align: center">4.91	</td>
+      <td style="text-align: center">97.67	</td>
+      <td style="text-align: center">4.93</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">0</td>
+      <td style="text-align: center">0.97	</td>
+      <td style="text-align: center">0.97	</td>
+      <td style="text-align: center">0.97	</td>
+      <td style="text-align: center">99.57	</td>
+      <td style="text-align: center">2.23	</td>
+      <td style="text-align: center">97.50	</td>
+      <td style="text-align: center">5.96	</td>
+      <td style="text-align: center">98.17	</td>
+      <td style="text-align: center">4.79</td>
+    </tr>
+    <tr>
+      <td rowspan="3" style="text-align: center"><b>0.0001</b></td>
+      <td style="text-align: center">0.4</td>
+      <td style="text-align: center">0.98	</td>
+      <td style="text-align: center">0.98	</td>
+      <td style="text-align: center">0.98	</td>
+      <td style="text-align: center">98.50	</td>
+      <td style="text-align: center">4.75	</td>
+      <td style="text-align: center">97.67	</td>
+      <td style="text-align: center">6.61	</td>
+      <td style="text-align: center">97.17	</td>
+      <td style="text-align: center">6.99</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">0.2</td>
+      <td style="text-align: center">0.98</td>
+      <td style="text-align: center">0.98</td>
+      <td style="text-align: center">0.98</td>
+      <td style="text-align: center">99.04	</td>
+      <td style="text-align: center">3.59	</td>
+      <td style="text-align: center">97.83	</td>
+      <td style="text-align: center">6.32	</td>
+      <td style="text-align: center">97.67	</td>
+      <td style="text-align: center">5.66</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><b>0</b></td>
+      <td style="text-align: center"><b>0.98	</b></td>
+      <td style="text-align: center"><b>0.98	</b></td>
+      <td style="text-align: center"><b>0.98	</b></td>
+      <td style="text-align: center"><b>99.86	</b></td>
+      <td style="text-align: center"><b>1.81	</b></td>
+      <td style="text-align: center"><b>97.50	</b></td>
+      <td style="text-align: center"><b>6.00	</b></td>
+      <td style="text-align: center"><b>98.50	</b></td>
+      <td style="text-align: center"><b>4.73</b></td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 style="text-align: center"> Experimental Results of the NASNETLarge Model using Data Loading Option 2</h4>
+<table>
+  <thead>
+    <tr>
+      <th colspan="2" style="text-align: center">Parameters</th>
+      <th colspan="3" style="text-align: center">Classification Report</th>
+      <th colspan="2" style="text-align: center">Training Score (%)</th>
+      <th colspan="2" style="text-align: center">Validation Score (%)</th>
+      <th colspan="2" style="text-align: center">Test Score (%)</th>
+    </tr>
+    <tr>
+      <th style="text-align: center">Learning Rate</th>
+      <th style="text-align: center">Dropout</th>
+      <th style="text-align: center">Precision</th>
+      <th style="text-align: center">Recall</th>
+      <th style="text-align: center">F1-Score</th>
+      <th style="text-align: center">Accuracy</th>
+      <th style="text-align: center">Loss</th>
+      <th style="text-align: center">Accuracy</th>
+      <th style="text-align: center">Loss</th>
+      <th style="text-align: center">Accuracy</th>
+      <th style="text-align: center">Loss</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td rowspan="3" style="text-align: center">0.1</td>
+      <td style="text-align: center">0.4</td>
+      <td style="text-align: center">0.22	</td>
+      <td style="text-align: center">0.39	</td>
+      <td style="text-align: center">0.28	</td>
+      <td style="text-align: center">40.57	</td>
+      <td style="text-align: center">957.46	</td>
+      <td style="text-align: center">40.33	</td>
+      <td style="text-align: center">961.71	</td>
+      <td style="text-align: center">37.33	</td>
+      <td style="text-align: center">1010.07</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">0.2</td>
+      <td style="text-align: center">0.06</td>
+      <td style="text-align: center">0.25</td>
+      <td style="text-align: center">0.10</td>
+      <td style="text-align: center">24.64	</td>
+      <td style="text-align: center">1214.61	</td>
+      <td style="text-align: center">24.83	</td>
+      <td style="text-align: center">1211.54	</td>
+      <td style="text-align: center">26.83	</td>
+      <td style="text-align: center">1179.31</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">0</td>
+      <td style="text-align: center">0.06</td>
+      <td style="text-align: center">0.25</td>
+      <td style="text-align: center">0.10</td>
+      <td style="text-align: center">25.18	</td>
+      <td style="text-align: center">1205.98	</td>
+      <td style="text-align: center">24.83	</td>
+      <td style="text-align: center">1211.54	</td>
+      <td style="text-align: center">24.33	</td>
+      <td style="text-align: center">1219.60</td>
+    </tr>
+    <tr>
+      <td rowspan="3" style="text-align: center">0.01</td>
+      <td style="text-align: center">0.4</td>
+      <td style="text-align: center">0.95	</td>
+      <td style="text-align: center">0.95	</td>
+      <td style="text-align: center">0.95	</td>
+      <td style="text-align: center">98.29	</td>
+      <td style="text-align: center">5.12	</td>
+      <td style="text-align: center">95.00	</td>
+      <td style="text-align: center">11.52	</td>
+      <td style="text-align: center">94.50	</td>
+      <td style="text-align: center">16.05</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">0.2</td>
+      <td style="text-align: center">0.96</td>
+      <td style="text-align: center">0.96</td>
+      <td style="text-align: center">0.96</td>
+      <td style="text-align: center">99.71	</td>
+      <td style="text-align: center">1.18	</td>
+      <td style="text-align: center">95.67	</td>
+      <td style="text-align: center">14.44	</td>
+      <td style="text-align: center">95.17	</td>
+      <td style="text-align: center">19.37</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">0</td>
+      <td style="text-align: center">0.96</td>
+      <td style="text-align: center">0.96</td>
+      <td style="text-align: center">0.96</td>
+      <td style="text-align: center">99.71	</td>
+      <td style="text-align: center">1.21	</td>
+      <td style="text-align: center">96.50	</td>
+      <td style="text-align: center">15.07	</td>
+      <td style="text-align: center">95.33	</td>
+      <td style="text-align: center">14.79</td>
+    </tr>
+    <tr>
+      <td rowspan="3" style="text-align: center">0.001</td>
+      <td style="text-align: center">0.4</td>
+      <td style="text-align: center">0.96</td>
+      <td style="text-align: center">0.96</td>
+      <td style="text-align: center">0.96</td>
+      <td style="text-align: center">99.50	</td>
+      <td style="text-align: center">1.95	</td>
+      <td style="text-align: center">96.50	</td>
+      <td style="text-align: center">11.71	</td>
+      <td style="text-align: center">95.50	</td>
+      <td style="text-align: center">11.63</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">0.2</td>
+      <td style="text-align: center">0.97</td>
+      <td style="text-align: center">0.97</td>
+      <td style="text-align: center">0.97</td>
+      <td style="text-align: center">99.75	</td>
+      <td style="text-align: center">1.67	</td>
+      <td style="text-align: center">96.83	</td>
+      <td style="text-align: center">11.92	</td>
+      <td style="text-align: center">96.67	</td>
+      <td style="text-align: center">11.66</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">0</td>
+      <td style="text-align: center">0.96</td>
+      <td style="text-align: center">0.96</td>
+      <td style="text-align: center">0.96</td>
+      <td style="text-align: center">99.57	</td>
+      <td style="text-align: center">1.94	</td>
+      <td style="text-align: center">96.17	</td>
+      <td style="text-align: center">12.79	</td>
+      <td style="text-align: center">95.33	</td>
+      <td style="text-align: center">12.44</td>
+    </tr>
+    <tr>
+      <td rowspan="3" style="text-align: center"><b>0.0001</b></td>
+      <td style="text-align: center">0.4</td>
+      <td style="text-align: center">0.95</td>
+      <td style="text-align: center">0.95</td>
+      <td style="text-align: center">0.95</td>
+      <td style="text-align: center">98.50	</td>
+      <td style="text-align: center">4.73	</td>
+      <td style="text-align: center">95.17	</td>
+      <td style="text-align: center">13.58	</td>
+      <td style="text-align: center">94.67	</td>
+      <td style="text-align: center">12.89</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">0.2</td>
+      <td style="text-align: center">0.96</td>
+      <td style="text-align: center">0.96</td>
+      <td style="text-align: center">0.96</td>
+      <td style="text-align: center">98.68	</td>
+      <td style="text-align: center">4.39	</td>
+      <td style="text-align: center">96.00	</td>
+      <td style="text-align: center">13.07	</td>
+      <td style="text-align: center">94.83	</td>
+      <td style="text-align: center">12.18</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><b>0</b></td>
+      <td style="text-align: center"><b>0.97	</b></td>
+      <td style="text-align: center"><b>0.96</b></td>
+      <td style="text-align: center"><b>0.96</b></td>
+      <td style="text-align: center"><b>99.50	</b></td>
+      <td style="text-align: center"><b>2.67	</b></td>
+      <td style="text-align: center"><b>96.50	</b></td>
+      <td style="text-align: center"><b>11.60	</b></td>
+      <td style="text-align: center"><b>95.00	</b></td>
+      <td style="text-align: center"><b>11.58</b></td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 style="text-align: center"> Summary of Model Performance for InceptionResNetV2 and NASNetLarge Across Two Data Loading Options: Row 1 Represents InceptionResNetV2 with Data Loading Option 2, While Row 2 Represents NASNetLarge with Data Loading Option 1.</h4>
+<table>
+  <thead>
+    <tr>
+      <th colspan="2" style="text-align: center">Parameters</th>
+      <th colspan="3" style="text-align: center">Classification Report</th>
+      <th colspan="2" style="text-align: center">Training Score (%)</th>
+      <th colspan="2" style="text-align: center">Validation Score (%)</th>
+      <th colspan="2" style="text-align: center">Test Score (%)</th>
+    </tr>
+    <tr>
+      <th style="text-align: center">Learning Rate</th>
+      <th style="text-align: center">Dropout</th>
+      <th style="text-align: center">Precision</th>
+      <th style="text-align: center">Recall</th>
+      <th style="text-align: center">F1-Score</th>
+      <th style="text-align: center">Accuracy</th>
+      <th style="text-align: center">Loss</th>
+      <th style="text-align: center">Accuracy</th>
+      <th style="text-align: center">Loss</th>
+      <th style="text-align: center">Accuracy</th>
+      <th style="text-align: center">Loss</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td rowspan="3" style="text-align: center">0.0001</td>
+      <td style="text-align: center"><b>0</b></td>
+      <td style="text-align: center"><b>0.98</b></td>
+      <td style="text-align: center"><b>0.98</b></td>
+      <td style="text-align: center"><b>0.98</b></td>
+      <td style="text-align: center"><b>99.86</b></td>
+      <td style="text-align: center"><b>1.81</b></td>
+      <td style="text-align: center"><b>97.50</b></td>
+      <td style="text-align: center"><b>6.00</b></td>
+      <td style="text-align: center"><b>98.50</b></td>
+      <td style="text-align: center"><b>4.73</b></td>
+    </tr>
+    <tr>
+      <td style="text-align: center">0.4</td>
+      <td style="text-align: center">0.98</td>
+      <td style="text-align: center">0.98</td>
+      <td style="text-align: center">0.98</td>
+      <td style="text-align: center">99.93</td>
+      <td style="text-align: center">1.07</td>
+      <td style="text-align: center">98.17</td>
+      <td style="text-align: center">6.90</td>
+      <td style="text-align: center">97.17</td>
+      <td style="text-align: center">9.47</td>
+    </tr>
+  </tbody>
+</table>
+
+<p align="center">
+  InceptionResNetV2 Accuracy vs Loss graph with 0.0001 learning rate and 0 dropout.
+  <img src="https://github.com/user-attachments/assets/9d26e4fe-9a24-4c45-a87a-95fd6f627c19" alt="image" />
+</p>
+
+<p align="justify">
+Initial experiments with InceptionResNetV2 as it shown in a figure above promising accuracy but exhibited overfitting tendencies, particularly when implemented without dropout (dropout rate = 0). To address this, the model was fine-tuned by adjusting the dropout rate to 0.1 while maintaining the original learning rate. The optimization process yielded significant improvements in model stability, culminating in an impressive accuracy of 98.16%. This enhanced performance is comprehensively documented through multiple evaluation metrics, as illustrated in a figure below, which displays the relationship between accuracy and loss across training epochs. 
+</p>
+
+<p align="center">
+  Final Optimized InceptionResNetV2 Model Accuracy vs Loss graph with a Learning Rate of 0.0001 and a Dropout Rate of 0.1.
+  <img src="https://github.com/user-attachments/assets/461deeae-e157-4b8c-86ce-55218851e408" alt="image" />
+</p>
+
+<p align="center">
+  Final Optimized InceptionResNetV2 Classification Report
+  <img src="https://github.com/user-attachments/assets/461deeae-e157-4b8c-86ce-55218851e408" alt="image" />
+</p>
+
+<p align="center">
+  Final Optimized InceptionResNetV2 Confusion Matrix
+  <img src="https://github.com/user-attachments/assets/461deeae-e157-4b8c-86ce-55218851e408" alt="image" />
+</p>
+
+<p align="center">
+  Final Optimized InceptionResNetV2 ROC Curves
+  <img src="https://github.com/user-attachments/assets/461deeae-e157-4b8c-86ce-55218851e408" alt="image" />
+</p>
+
+The detailed performance analysis is further substantiated by the classification report presented in Table 4.6, and the confusion matrix, which provides a thorough breakdown of the model's classification performance across different classes. Additionally, the model's discrimination capabilities are visualized through ROC curves, offering a complete perspective of its predictive power. These collective metrics demonstrate the robustness and effectiveness of the optimized model in accurately classifying the target variables. 
+
+#### Impact of Data Loading and Key Parameters
+<p align="justify"> The experimental results highlighted optimized data loading strategy and two crucial parameters affecting model performance:
+</p>
+
+- Data Loading
+  Experimental results demonstrate that Single Global Dataset Creation (Option 2) outperforms Class-Specific Data Preparation (Option 1) in deep learning model training. This superiority stems from three key mechanisms: enhanced randomization, computational optimization, and statistical integrity. SGDC's global shuffling mechanism ensures optimal dataset randomization, generating diverse batch compositions that yield robust gradient updates and improved model generalization. The unified processing approach eliminates redundant operations inherent in class-specific structures, while maintaining natural statistical distributions across training, validation, and test splits. This streamlined methodology not only enhances computational efficiency but also minimizes implementation artifacts that could impair training dynamics, ultimately providing a more robust foundation for deep learning model development.
+  
+- Dropout Rate
+  The implementation of dropout proved essential for model regularization, with models showing consistent overfitting tendencies when dropout was omitted (rate = 0). Dropout implementation contributed to model robustness through several key mechanisms. It prevented overfitting by reducing neuron codependency, while simultaneously enhancing generalization capability through forced independent learning. Furthermore, the implementation improved model resilience through distributed feature learning, ensuring more robust feature extraction across the network.
+  
+- Learning Rate
+  The learning rate significantly influenced model convergence and stability. Higher learning rates led to training instability, while excessively low rates resulted in slower convergence and potential local minima traps. The relationship between learning rate and batch size emerged as an important consideration, with larger batch sizes generally accommodating higher learning rates due to gradient stability.
+
+#### Architectural Performance Analysis
+<p align="justify"> The superior performance of InceptionResNetV2 over NASNetLarge can be attributed to several factors:
+</p>
+
+- Dataset Compability
+  The current dataset size (4,000 images, 1,000 per class) appears optimally suited for InceptionResNetV2's architecture. However, these results might differ with substantially larger datasets (>7,000 images).
+  
+- Model Complexity
+  NASNetLarge's reinforcement learning-based architecture, while sophisticated, may be prone to overfitting on smaller datasets due to its extensive parameter count. Conversely, InceptionResNetV2's combination
+  
+- Transfer Learning Efficiency
+  The high accuracy achieved with a significant proportion of non-trainable parameters suggests effective transfer learning implementation. InceptionResNetV2's architecture appears to better leverage pre-trained features for the specific requirements of leukemia classification.
+
+The results demonstrate that well-tuned traditional architectures can outperform modern alternatives, particularly when working with moderate-sized datasets.
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/3207775d-fb87-4a4a-a65a-3f4fae625f61" alt="Image 1" width="180" style="margin: 0 10px;" />
+  <img src="https://github.com/user-attachments/assets/385a3015-1f57-46c0-b319-31725782b877" alt="Image 2" width="180" style="margin: 0 10px;" />
+  <img src="https://github.com/user-attachments/assets/4bc904dc-9aec-4129-8f49-6ff054fc4d34" alt="Image 3" width="180" style="margin: 0 10px;" />
+  <img src="https://github.com/user-attachments/assets/258476cc-7511-45d0-b044-5b715597780a" alt="Image 4" width="180" style="margin: 0 10px;" />
+</p>
+
+#### Evolution of CNN Architectures: Traditional vs. Modern Approaches
+<p align="justify">
+The experimental results observed in this study reflect broader trends in the evolution of Convolutional Neural Networks (CNNs). Since AlexNet's breakthrough performance in the 2012 ImageNet competition, CNN architectures have undergone significant advancement, demonstrating capabilities that frequently surpass human performance in image processing tasks.
+</p>
+
+<p align="justify">
+The fundamental concept of CNNs, though implemented over three decades ago, gained prominence primarily due to two factors: the democratization of computational resources and the availability of large-scale datasets. This evolution has particularly addressed the inherent challenges of image processing, where traditional neural networks faced significant limitations due to high-dimensional input data. For instance, a 1000 × 1000-pixel image presents one million features, requiring approximately 10¹² parameters in a single-layer feed-forward neural network, a scale that poses substantial challenges in terms of both computational resources and potential overfitting.
+
+<p align="justify">
+CNNs effectively address these challenges by leveraging two key characteristics of image data. The first is feature localization, which describes the correlation between adjacent pixels in representing semantic features. The second is feature independence of location, which refers to the invariance of feature significance regardless of spatial position.
+</p>
+
+<p align="center">
+  CNN Seen from Neural Network Perspective
+  <img src="https://github.com/user-attachments/assets/4130cd06-716e-46a3-9f6d-6e0d40e84ff1" alt="image" />
+</p>
+
+<p align="justify">
+These properties are implemented through shared parameters and locally connected networks as it shown in Figure 4.11. which dramatically reducing the parameter space from 10¹² to 10³ in typical applications. The CNN architecture achieves this efficiency through three primary components: convolution layers, pooling layers, and fully connected layers. The convolution layers implement filters with defined stride patterns for feature extraction, while pooling layers provide feature resilience and parameter reduction through max or average operations. Finally, fully connected layers connect flattened convolutional features to output classifications, completing the network's processing pipeline.
+</p>
+
+<p align="justify">
+This progression contextualizes our experimental findings, where InceptionResNetV2, representing the architecture engineering phase, demonstrated superior performance compared to NASNetLarge, an AutoML-based approach. While NASNetLarge exemplifies the potential of reinforcement learning in architecture design, achieving state-of-the-art results on ImageNet, its implementation requires substantial computational resources that limit its accessibility. 
+</p>
+
+<p align="justify">
+The superior performance of InceptionResNetV2 in this study of leukemia classification task, as detailed in Figure 4.12, suggests that architecture engineering approaches remain highly relevant for specific applications, particularly with moderate-sized datasets. However, the future trajectory of CNN development appears oriented toward AutoML methodologies, despite their current limitations in computational requirements.
+</p>
+
+<p align="center">
+  CNN Architecture Evolution
+  <img src="https://github.com/user-attachments/assets/7f5a976e-9158-422c-9d98-56fcdcfeb020" alt="image" />
+</p>
+
+<p align="justify">
+This evolution reflects the ongoing challenge in deep learning: balancing model complexity, computational efficiency, and generalization capability. While AutoML approaches like NASNetLarge represent the cutting edge of architectural innovation, our results demonstrate that well-engineered traditional architectures can still provide optimal solutions for specific medical imaging applications. This observation is particularly relevant for healthcare implementations where computational resources may be constrained, and dataset sizes are moderate.
+</p>
 
 ## Segmentation Task
 ### Data Preprocessing
