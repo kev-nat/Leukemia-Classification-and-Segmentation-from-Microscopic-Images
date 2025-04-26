@@ -941,73 +941,70 @@ From all these tables it shows 48 experiments comparing InceptionResNetV2 and NA
   </tbody>
 </table>
 
+<h4 align="center">InceptionResNetV2 Accuracy vs Loss graph with 0.0001 learning rate and 0 dropout.</h4>
 <p align="center">
-  InceptionResNetV2 Accuracy vs Loss graph with 0.0001 learning rate and 0 dropout.
-  <img src="https://github.com/user-attachments/assets/9d26e4fe-9a24-4c45-a87a-95fd6f627c19" alt="image" />
+  <img src="https://github.com/user-attachments/assets/9d26e4fe-9a24-4c45-a87a-95fd6f627c19" width="250" style="margin: 0 10px;" />
+  <img src="https://github.com/user-attachments/assets/9d26e4fe-9a24-4c45-a87a-95fd6f627c19" width="250" style="margin: 0 10px;" />
 </p>
 
 <p align="justify">
 Initial experiments with InceptionResNetV2 as it shown in a figure above promising accuracy but exhibited overfitting tendencies, particularly when implemented without dropout (dropout rate = 0). To address this, the model was fine-tuned by adjusting the dropout rate to 0.1 while maintaining the original learning rate. The optimization process yielded significant improvements in model stability, culminating in an impressive accuracy of 98.16%. This enhanced performance is comprehensively documented through multiple evaluation metrics, as illustrated in a figure below, which displays the relationship between accuracy and loss across training epochs. 
 </p>
 
+<h4 align="center">Final Optimized InceptionResNetV2 Model Accuracy vs Loss graph with a Learning Rate of 0.0001 and a Dropout Rate of 0.1.</h4>
 <p align="center">
-  Final Optimized InceptionResNetV2 Model Accuracy vs Loss graph with a Learning Rate of 0.0001 and a Dropout Rate of 0.1.
-  <img src="https://github.com/user-attachments/assets/461deeae-e157-4b8c-86ce-55218851e408" alt="image" />
+  <img src="https://github.com/user-attachments/assets/d67abd42-0252-41b5-a281-a376a70848c2" width="250" style="margin: 0 10px;" />
+  <img src="https://github.com/user-attachments/assets/359ce684-e0c4-487a-9223-f36387cc4fac" width="250" style="margin: 0 10px;" />
 </p>
 
+<h4 align="center">Final Optimized InceptionResNetV2 Confusion Matrix</h4>
 <p align="center">
-  Final Optimized InceptionResNetV2 Classification Report
-  <img src="https://github.com/user-attachments/assets/461deeae-e157-4b8c-86ce-55218851e408" alt="image" />
+  <img src="https://github.com/user-attachments/assets/ce872d0e-0180-4830-951f-cabba7a00831" alt="Confusion Matrix" />
 </p>
 
+<h4 align="center">Final Optimized InceptionResNetV2 Confusion Matrix</h4>
 <p align="center">
-  Final Optimized InceptionResNetV2 Confusion Matrix
-  <img src="https://github.com/user-attachments/assets/461deeae-e157-4b8c-86ce-55218851e408" alt="image" />
+  <img src="https://github.com/user-attachments/assets/ce872d0e-0180-4830-951f-cabba7a00831" alt="Confusion Matrix" />
 </p>
 
 <p align="center">
   Final Optimized InceptionResNetV2 ROC Curves
-  <img src="https://github.com/user-attachments/assets/461deeae-e157-4b8c-86ce-55218851e408" alt="image" />
+  <img src="https://github.com/user-attachments/assets/eebb1c6a-e5fe-4d8b-8b25-49a19b2cf1a3" alt="ROC Curves" />
 </p>
 
-The detailed performance analysis is further substantiated by the classification report presented in Table 4.6, and the confusion matrix, which provides a thorough breakdown of the model's classification performance across different classes. Additionally, the model's discrimination capabilities are visualized through ROC curves, offering a complete perspective of its predictive power. These collective metrics demonstrate the robustness and effectiveness of the optimized model in accurately classifying the target variables. 
+The detailed performance analysis is further substantiated by the classification report presented in a table above and the confusion matrix, which provides a thorough breakdown of the model's classification performance across different classes. Additionally, the model's discrimination capabilities are visualized through ROC curves, offering a complete perspective of its predictive power. These collective metrics demonstrate the robustness and effectiveness of the optimized model in accurately classifying the target variables. 
 
 #### Impact of Data Loading and Key Parameters
 <p align="justify"> The experimental results highlighted optimized data loading strategy and two crucial parameters affecting model performance:
 </p>
 
-- Data Loading
-  Experimental results demonstrate that Single Global Dataset Creation (Option 2) outperforms Class-Specific Data Preparation (Option 1) in deep learning model training. This superiority stems from three key mechanisms: enhanced randomization, computational optimization, and statistical integrity. SGDC's global shuffling mechanism ensures optimal dataset randomization, generating diverse batch compositions that yield robust gradient updates and improved model generalization. The unified processing approach eliminates redundant operations inherent in class-specific structures, while maintaining natural statistical distributions across training, validation, and test splits. This streamlined methodology not only enhances computational efficiency but also minimizes implementation artifacts that could impair training dynamics, ultimately providing a more robust foundation for deep learning model development.
+- Experimental results demonstrate that Single Global Dataset Creation (Option 2) outperforms Class-Specific Data Preparation (Option 1) in deep learning model training. This superiority stems from three key mechanisms: enhanced randomization, computational optimization, and statistical integrity. SGDC's global shuffling mechanism ensures optimal dataset randomization, generating diverse batch compositions that yield robust gradient updates and improved model generalization. The unified processing approach eliminates redundant operations inherent in class-specific structures, while maintaining natural statistical distributions across training, validation, and test splits. This streamlined methodology not only enhances computational efficiency but also minimizes implementation artifacts that could impair training dynamics, ultimately providing a more robust foundation for deep learning model development.
   
-- Dropout Rate
-  The implementation of dropout proved essential for model regularization, with models showing consistent overfitting tendencies when dropout was omitted (rate = 0). Dropout implementation contributed to model robustness through several key mechanisms. It prevented overfitting by reducing neuron codependency, while simultaneously enhancing generalization capability through forced independent learning. Furthermore, the implementation improved model resilience through distributed feature learning, ensuring more robust feature extraction across the network.
+- The implementation of dropout proved essential for model regularization, with models showing consistent overfitting tendencies when dropout was omitted (rate = 0). Dropout implementation contributed to model robustness through several key mechanisms. It prevented overfitting by reducing neuron codependency, while simultaneously enhancing generalization capability through forced independent learning. Furthermore, the implementation improved model resilience through distributed feature learning, ensuring more robust feature extraction across the network.
   
-- Learning Rate
-  The learning rate significantly influenced model convergence and stability. Higher learning rates led to training instability, while excessively low rates resulted in slower convergence and potential local minima traps. The relationship between learning rate and batch size emerged as an important consideration, with larger batch sizes generally accommodating higher learning rates due to gradient stability.
+- The learning rate significantly influenced model convergence and stability. Higher learning rates led to training instability, while excessively low rates resulted in slower convergence and potential local minima traps. The relationship between learning rate and batch size emerged as an important consideration, with larger batch sizes generally accommodating higher learning rates due to gradient stability.
 
 #### Architectural Performance Analysis
 <p align="justify"> The superior performance of InceptionResNetV2 over NASNetLarge can be attributed to several factors:
 </p>
 
-- Dataset Compability
-  The current dataset size (4,000 images, 1,000 per class) appears optimally suited for InceptionResNetV2's architecture. However, these results might differ with substantially larger datasets (>7,000 images).
+- The current dataset size (4,000 images, 1,000 per class) appears optimally suited for InceptionResNetV2's architecture. However, these results might differ with substantially larger datasets (>7,000 images).
   
-- Model Complexity
-  NASNetLarge's reinforcement learning-based architecture, while sophisticated, may be prone to overfitting on smaller datasets due to its extensive parameter count. Conversely, InceptionResNetV2's combination
+- NASNetLarge's reinforcement learning-based architecture, while sophisticated, may be prone to overfitting on smaller datasets due to its extensive parameter count. Conversely, InceptionResNetV2's combination
   
-- Transfer Learning Efficiency
-  The high accuracy achieved with a significant proportion of non-trainable parameters suggests effective transfer learning implementation. InceptionResNetV2's architecture appears to better leverage pre-trained features for the specific requirements of leukemia classification.
+- The high accuracy achieved with a significant proportion of non-trainable parameters shows effective transfer learning implementation. InceptionResNetV2's architecture appears to better leverage pre-trained features for the specific requirements of leukemia classification.
 
 The results demonstrate that well-tuned traditional architectures can outperform modern alternatives, particularly when working with moderate-sized datasets.
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/3207775d-fb87-4a4a-a65a-3f4fae625f61" alt="Image 1" width="180" style="margin: 0 10px;" />
-  <img src="https://github.com/user-attachments/assets/385a3015-1f57-46c0-b319-31725782b877" alt="Image 2" width="180" style="margin: 0 10px;" />
-  <img src="https://github.com/user-attachments/assets/4bc904dc-9aec-4129-8f49-6ff054fc4d34" alt="Image 3" width="180" style="margin: 0 10px;" />
-  <img src="https://github.com/user-attachments/assets/258476cc-7511-45d0-b044-5b715597780a" alt="Image 4" width="180" style="margin: 0 10px;" />
+  <img src="https://github.com/user-attachments/assets/3207775d-fb87-4a4a-a65a-3f4fae625f61" alt="Image 1" width="225" style="margin: 0 10px;" />
+  <img src="https://github.com/user-attachments/assets/385a3015-1f57-46c0-b319-31725782b877" alt="Image 2" width="225" style="margin: 0 10px;" />
+  <img src="https://github.com/user-attachments/assets/4bc904dc-9aec-4129-8f49-6ff054fc4d34" alt="Image 3" width="225" style="margin: 0 10px;" />
+  <img src="https://github.com/user-attachments/assets/258476cc-7511-45d0-b044-5b715597780a" alt="Image 4" width="225" style="margin: 0 10px;" />
 </p>
 
 #### Evolution of CNN Architectures: Traditional vs. Modern Approaches
+
 <p align="justify">
 The experimental results observed in this study reflect broader trends in the evolution of Convolutional Neural Networks (CNNs). Since AlexNet's breakthrough performance in the 2012 ImageNet competition, CNN architectures have undergone significant advancement, demonstrating capabilities that frequently surpass human performance in image processing tasks.
 </p>
@@ -1025,7 +1022,7 @@ CNNs effectively address these challenges by leveraging two key characteristics 
 </p>
 
 <p align="justify">
-These properties are implemented through shared parameters and locally connected networks as it shown in Figure 4.11. which dramatically reducing the parameter space from 10¹² to 10³ in typical applications. The CNN architecture achieves this efficiency through three primary components: convolution layers, pooling layers, and fully connected layers. The convolution layers implement filters with defined stride patterns for feature extraction, while pooling layers provide feature resilience and parameter reduction through max or average operations. Finally, fully connected layers connect flattened convolutional features to output classifications, completing the network's processing pipeline.
+These properties are implemented through shared parameters and locally connected networks as it shown above which dramatically reducing the parameter space from 10¹² to 10³ in typical applications. The CNN architecture achieves this efficiency through three primary components: convolution layers, pooling layers, and fully connected layers. The convolution layers implement filters with defined stride patterns for feature extraction, while pooling layers provide feature resilience and parameter reduction through max or average operations. Finally, fully connected layers connect flattened convolutional features to output classifications, completing the network's processing pipeline.
 </p>
 
 <p align="justify">
@@ -1033,12 +1030,11 @@ This progression contextualizes our experimental findings, where InceptionResNet
 </p>
 
 <p align="justify">
-The superior performance of InceptionResNetV2 in this study of leukemia classification task, as detailed in Figure 4.12, suggests that architecture engineering approaches remain highly relevant for specific applications, particularly with moderate-sized datasets. However, the future trajectory of CNN development appears oriented toward AutoML methodologies, despite their current limitations in computational requirements.
+The superior performance of InceptionResNetV2 in this study of leukemia classification task, as detailed in a figure below, suggests that architecture engineering approaches remain highly relevant for specific applications, particularly with moderate-sized datasets. However, the future trajectory of CNN development appears oriented toward AutoML methodologies, despite their current limitations in computational requirements.
 </p>
 
 <p align="center">
-  CNN Architecture Evolution
-  <img src="https://github.com/user-attachments/assets/7f5a976e-9158-422c-9d98-56fcdcfeb020" alt="image" />
+  <img src="https://github.com/user-attachments/assets/7f5a976e-9158-422c-9d98-56fcdcfeb020" />
 </p>
 
 <p align="justify">
