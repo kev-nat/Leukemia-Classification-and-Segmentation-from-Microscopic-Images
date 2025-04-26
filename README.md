@@ -1096,10 +1096,10 @@ The detailed performance analysis is further substantiated by the classification
 <p align="justify"> The results demonstrate that well-tuned traditional architectures can outperform modern alternatives, particularly when working with moderate-sized datasets. </p>
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/3207775d-fb87-4a4a-a65a-3f4fae625f61" alt="Image 1" width="225" style="margin: 0 10px;" />
-  <img src="https://github.com/user-attachments/assets/385a3015-1f57-46c0-b319-31725782b877" alt="Image 2" width="225" style="margin: 0 10px;" />
-  <img src="https://github.com/user-attachments/assets/4bc904dc-9aec-4129-8f49-6ff054fc4d34" alt="Image 3" width="225" style="margin: 0 10px;" />
-  <img src="https://github.com/user-attachments/assets/258476cc-7511-45d0-b044-5b715597780a" alt="Image 4" width="225" style="margin: 0 10px;" />
+  <img src="https://github.com/user-attachments/assets/3207775d-fb87-4a4a-a65a-3f4fae625f61" alt="Image 1" width="200" style="margin: 0 10px;" />
+  <img src="https://github.com/user-attachments/assets/385a3015-1f57-46c0-b319-31725782b877" alt="Image 2" width="200" style="margin: 0 10px;" />
+  <img src="https://github.com/user-attachments/assets/4bc904dc-9aec-4129-8f49-6ff054fc4d34" alt="Image 3" width="200" style="margin: 0 10px;" />
+  <img src="https://github.com/user-attachments/assets/258476cc-7511-45d0-b044-5b715597780a" alt="Image 4" width="200" style="margin: 0 10px;" />
 </p>
 
 #### Evolution of CNN Architectures: Traditional vs. Modern Approaches
