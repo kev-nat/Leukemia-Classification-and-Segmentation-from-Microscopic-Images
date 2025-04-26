@@ -888,6 +888,10 @@ From all these tables it shows 48 experiments comparing InceptionResNetV2 and NA
   </tbody>
 </table>
 
+<p align="justify">
+All these table shows that the experimental results demonstrate that InceptionResNetV2 consistently outperformed NASNetLarge in classification accuracy. Three critical parameters emerged as significant determinants of model performance: dropout rate, learning rate and data loading configurations. While both architectures achieved high accuracy, the traditional InceptionResNetV2 architecture exhibited superior performance compared to the modern NASNetLarge architecture on the given dataset.
+</p>
+
 <h4 style="text-align: center"> Summary of Model Performance for InceptionResNetV2 and NASNetLarge Across Two Data Loading Options: Row 1 Represents InceptionResNetV2 with Data Loading Option 2, While Row 2 Represents NASNetLarge with Data Loading Option 1.</h4>
 <table>
   <thead>
@@ -941,10 +945,10 @@ From all these tables it shows 48 experiments comparing InceptionResNetV2 and NA
   </tbody>
 </table>
 
-<h4 align="center">InceptionResNetV2 Accuracy vs Loss graph with 0.0001 learning rate and 0 dropout.</h4>
+<h4 align="center">InceptionResNetV2 Accuracy vs Loss graph with 0.0001 Learning Rate and 0 Dropout.</h4>
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/9d26e4fe-9a24-4c45-a87a-95fd6f627c19" width="250" style="margin: 0 10px;" />
-  <img src="https://github.com/user-attachments/assets/9d26e4fe-9a24-4c45-a87a-95fd6f627c19" width="250" style="margin: 0 10px;" />
+  <img src="https://github.com/user-attachments/assets/f1396a18-d8c7-4f0a-a254-d69b02704b63" width="250" style="margin: 0 10px;" />
+  <img src="https://github.com/user-attachments/assets/ec3cafe7-dd1a-4afb-b6f1-eb040b9348dd" width="250" style="margin: 0 10px;" />
 </p>
 
 <p align="justify">
@@ -953,23 +957,80 @@ Initial experiments with InceptionResNetV2 as it shown in a figure above promisi
 
 <h4 align="center">Final Optimized InceptionResNetV2 Model Accuracy vs Loss graph with a Learning Rate of 0.0001 and a Dropout Rate of 0.1.</h4>
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/d67abd42-0252-41b5-a281-a376a70848c2" width="250" style="margin: 0 10px;" />
-  <img src="https://github.com/user-attachments/assets/359ce684-e0c4-487a-9223-f36387cc4fac" width="250" style="margin: 0 10px;" />
+  <img src="https://github.com/user-attachments/assets/1e071f66-ec69-4fd4-af2a-c823e7e046d6" width="250" style="margin: 0 10px;" />
+  <img src="https://github.com/user-attachments/assets/83da6fc8-052c-43f0-8cba-b060c210c73b" width="250" style="margin: 0 10px;" />
 </p>
 
-<h4 align="center">Final Optimized InceptionResNetV2 Confusion Matrix</h4>
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/ce872d0e-0180-4830-951f-cabba7a00831" alt="Confusion Matrix" />
-</p>
+<h4 style="text-align: center"> Final Optimized InceptionResNetV2 Classification Report</h4>
+<table>
+  <thead>
+    </tr>
+    <tr style="border-top: 2px solid black; border-bottom: 1px solid black;">
+      <th style="text-align: right; padding: 8px;"></th>
+      <th style="text-align: center; padding: 8px;">precision</th>
+      <th style="text-align: center; padding: 8px;">recall</th>
+      <th style="text-align: center; padding: 8px;">f1-score</th>
+      <th style="text-align: center; padding: 8px;">support</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: right; padding: 8px;">Benign</td>
+      <td style="text-align: center; padding: 8px;">0.99</td>
+      <td style="text-align: center; padding: 8px;">0.95</td>
+      <td style="text-align: center; padding: 8px;">0.97</td>
+      <td style="text-align: center; padding: 8px;">149</td>
+    </tr>
+    <tr>
+      <td style="text-align: right; padding: 8px;">Early</td>
+      <td style="text-align: center; padding: 8px;">0.97</td>
+      <td style="text-align: center; padding: 8px;">0.98</td>
+      <td style="text-align: center; padding: 8px;">0.97</td>
+      <td style="text-align: center; padding: 8px;">142</td>
+    </tr>
+    <tr>
+      <td style="text-align: right; padding: 8px;">Pre</td>
+      <td style="text-align: center; padding: 8px;">0.99</td>
+      <td style="text-align: center; padding: 8px;">0.99</td>
+      <td style="text-align: center; padding: 8px;">0.99</td>
+      <td style="text-align: center; padding: 8px;">149</td>
+    </tr>
+    <tr>
+      <td style="text-align: right; padding: 8px;">Pro</td>
+      <td style="text-align: center; padding: 8px;">0.98</td>
+      <td style="text-align: center; padding: 8px;">1.00</td>
+      <td style="text-align: center; padding: 8px;">0.99</td>
+      <td style="text-align: center; padding: 8px;">160</td>
+    </tr>
+    <tr>
+      <td style="text-align: right; padding: 8px;">accuracy</td>
+      <td style="text-align: center; padding: 8px;"></td>
+      <td style="text-align: center; padding: 8px;"></td>
+      <td style="text-align: center; padding: 8px;">0.98</td>
+      <td style="text-align: center; padding: 8px;">600</td>
+    </tr>
+    <tr>
+      <td style="text-align: right; padding: 8px;">macro avg</td>
+      <td style="text-align: center; padding: 8px;">0.98</td>
+      <td style="text-align: center; padding: 8px;">0.98</td>
+      <td style="text-align: center; padding: 8px;">0.98</td>
+      <td style="text-align: center; padding: 8px;">600</td>
+    </tr>
+    <tr style="border-bottom: 2px solid black;">
+      <td style="text-align: right; padding: 8px;">weighted avg</td>
+      <td style="text-align: center; padding: 8px;">0.98</td>
+      <td style="text-align: center; padding: 8px;">0.98</td>
+      <td style="text-align: center; padding: 8px;">0.98</td>
+      <td style="text-align: center; padding: 8px;">600</td>
+    </tr>
+  </tbody>
+</table>
 
-<h4 align="center">Final Optimized InceptionResNetV2 Confusion Matrix</h4>
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/ce872d0e-0180-4830-951f-cabba7a00831" alt="Confusion Matrix" />
-</p>
 
+<h4 align="center">Final Optimized InceptionResNetV2 Confusion Matrix & ROC Curves</h4>
 <p align="center">
-  Final Optimized InceptionResNetV2 ROC Curves
-  <img src="https://github.com/user-attachments/assets/eebb1c6a-e5fe-4d8b-8b25-49a19b2cf1a3" alt="ROC Curves" />
+  <img src="https://github.com/user-attachments/assets/ce872d0e-0180-4830-951f-cabba7a00831" width="400" style="margin: 0 10px;" />
+  <img src="https://github.com/user-attachments/assets/eebb1c6a-e5fe-4d8b-8b25-49a19b2cf1a3" width="400" style="margin: 0 10px;" />
 </p>
 
 The detailed performance analysis is further substantiated by the classification report presented in a table above and the confusion matrix, which provides a thorough breakdown of the model's classification performance across different classes. Additionally, the model's discrimination capabilities are visualized through ROC curves, offering a complete perspective of its predictive power. These collective metrics demonstrate the robustness and effectiveness of the optimized model in accurately classifying the target variables. 
@@ -1016,9 +1077,9 @@ The fundamental concept of CNNs, though implemented over three decades ago, gain
 CNNs effectively address these challenges by leveraging two key characteristics of image data. The first is feature localization, which describes the correlation between adjacent pixels in representing semantic features. The second is feature independence of location, which refers to the invariance of feature significance regardless of spatial position.
 </p>
 
+<h4 align="center">CNN Architecture Evolution </h4>
 <p align="center">
-  CNN Seen from Neural Network Perspective
-  <img src="https://github.com/user-attachments/assets/4130cd06-716e-46a3-9f6d-6e0d40e84ff1" alt="image" />
+  <img src="https://github.com/user-attachments/assets/4130cd06-716e-46a3-9f6d-6e0d40e84ff1" />
 </p>
 
 <p align="justify">
@@ -1033,6 +1094,7 @@ This progression contextualizes our experimental findings, where InceptionResNet
 The superior performance of InceptionResNetV2 in this study of leukemia classification task, as detailed in a figure below, suggests that architecture engineering approaches remain highly relevant for specific applications, particularly with moderate-sized datasets. However, the future trajectory of CNN development appears oriented toward AutoML methodologies, despite their current limitations in computational requirements.
 </p>
 
+<h4 align="center">CNN Architecture Evolution </h4>
 <p align="center">
   <img src="https://github.com/user-attachments/assets/7f5a976e-9158-422c-9d98-56fcdcfeb020" />
 </p>
