@@ -1334,7 +1334,11 @@ The baseline U-Net model achieved promising initial results with high accuracy a
 </p>
 
 <p align="justify">
-The performance limitations of the standard U-Net architecture stemmed from its restricted capacity for multi-scale context representation. As the encoder down samples, global contextual features can be lost due to the focus on increasingly localized patterns, particularly affecting the segmentation of objects with varying sizes or those spread across the image. To address these limitations, the study implemented a Feature Pyramid Network (FPN) within the encoder segment of the U-Net architecture. The FPN integration was motivated to enhance the model's multi-scale feature representation capabilities. As described by Lin et al. (2017) in their seminal work on Feature Pyramid Networks for Object Detection, the FPN constructs a semantically rich pyramid of feature maps across multiple resolutions. This architecture utilizes lateral connections to merge high-level semantic features with low-level spatial details, while its top-down pathway progressively refines and integrates up sampled feature maps.
+The performance limitations of the standard U-Net architecture stemmed from its restricted capacity for multi-scale context representation. As the encoder down samples, global contextual features can be lost due to the focus on increasingly localized patterns, particularly affecting the segmentation of objects with varying sizes or those spread across the image. To address these limitations, the study implemented a Feature Pyramid Network (FPN) within the encoder segment of the U-Net architecture. The FPN integration was motivated to enhance the model's multi-scale feature representation capabilities. 
+</p>
+
+<p align="justify">
+As described by Lin et al. (2017) in their seminal work on Feature Pyramid Networks for Object Detection, the FPN constructs a semantically rich pyramid of feature maps across multiple resolutions. This architecture utilizes lateral connections to merge high-level semantic features with low-level spatial details, while its top-down pathway progressively refines and integrates up sampled feature maps.
 </p>
 
 <div align="center">
@@ -1391,87 +1395,293 @@ The performance limitations of the standard U-Net architecture stemmed from its 
    <tr>
      <td rowspan="3" style="text-align: center; padding: 8px;">0.01</td>
      <td style="text-align: center; padding: 8px;">0.4</td>
-     <td style="text-align: center; padding: 8px;">93.73</td>
-     <td style="text-align: center; padding: 8px;">15.16</td>
-     <td style="text-align: center; padding: 8px;">64.55</td>
-     <td style="text-align: center; padding: 8px;">36.51</td>
-     <td style="text-align: center; padding: 8px;">18.29</td>
-     <td style="text-align: center; padding: 8px;">37.62</td>
+     <td style="text-align: center; padding: 8px;">98.72	</td>
+     <td style="text-align: center; padding: 8px;">3.24	</td>
+     <td style="text-align: center; padding: 8px;">91.47	</td>
+     <td style="text-align: center; padding: 8px;">91.44	</td>
+     <td style="text-align: center; padding: 8px;">63.86	</td>
+     <td style="text-align: center; padding: 8px;">87.35</td>
    </tr>
    <tr>
      <td style="text-align: center; padding: 8px;">0.2</td>
-     <td style="text-align: center; padding: 8px;">97.25</td>
-     <td style="text-align: center; padding: 8px;">6.44</td>
-     <td style="text-align: center; padding: 8px;">77.05</td>
-     <td style="text-align: center; padding: 8px;">90.23</td>
-     <td style="text-align: center; padding: 8px;">48.37</td>
-     <td style="text-align: center; padding: 8px;">72.55</td>
+     <td style="text-align: center; padding: 8px;">97.26	</td>
+     <td style="text-align: center; padding: 8px;">6.79	</td>
+     <td style="text-align: center; padding: 8px;">81.08	</td>
+     <td style="text-align: center; padding: 8px;">82.82	</td>
+     <td style="text-align: center; padding: 8px;">48.78	</td>
+     <td style="text-align: center; padding: 8px;">73.17</td>
    </tr>
    <tr style="border-bottom: 1px solid black;">
      <td style="text-align: center; padding: 8px;">0</td>
-     <td style="text-align: center; padding: 8px;">98.70</td>
-     <td style="text-align: center; padding: 8px;">3.29</td>
-     <td style="text-align: center; padding: 8px;">91.26</td>
-     <td style="text-align: center; padding: 8px;">91.46</td>
-     <td style="text-align: center; padding: 8px;">63.80</td>
-     <td style="text-align: center; padding: 8px;">87.55</td>
+     <td style="text-align: center; padding: 8px;">97.17	</td>
+     <td style="text-align: center; padding: 8px;">7.19	</td>
+     <td style="text-align: center; padding: 8px;">81.84	</td>
+     <td style="text-align: center; padding: 8px;">80.16	</td>
+     <td style="text-align: center; padding: 8px;">44.31	</td>
+     <td style="text-align: center; padding: 8px;">70.12</td>
    </tr>
    <tr>
-     <td rowspan="3" style="text-align: center; padding: 8px; color: green;">0.001</td>
-     <td style="text-align: center; padding: 8px;">0.4</td>
-     <td style="text-align: center; padding: 8px;">99.13</td>
-     <td style="text-align: center; padding: 8px;">2.09</td>
-     <td style="text-align: center; padding: 8px;">94.06</td>
-     <td style="text-align: center; padding: 8px;">94.32</td>
-     <td style="text-align: center; padding: 8px;">71.37</td>
-     <td style="text-align: center; padding: 8px;">91.55</td>
+     <td rowspan="3" style="text-align: center; padding: 8px; color: green;"><b>0.001</b></td>
+     <td style="text-align: center; padding: 8px;"><b>0.4</b></td>
+     <td style="text-align: center; padding: 8px;"><b>99.16</b></td>
+     <td style="text-align: center; padding: 8px;"><b>1.99</b></td>
+     <td style="text-align: center; padding: 8px;"><b>94.82</b></td>
+     <td style="text-align: center; padding: 8px;"><b>93.95</b></td>
+     <td style="text-align: center; padding: 8px;"><b>71.96</b></td>
+     <td style="text-align: center; padding: 8px;"><b>91.81</b></td>
    </tr>
    <tr>
      <td style="text-align: center; padding: 8px;">0.2</td>
-     <td style="text-align: center; padding: 8px;">99.14</td>
-     <td style="text-align: center; padding: 8px;">2.04</td>
-     <td style="text-align: center; padding: 8px;">94.07</td>
-     <td style="text-align: center; padding: 8px;">94.56</td>
-     <td style="text-align: center; padding: 8px;">71.32</td>
-     <td style="text-align: center; padding: 8px;">91.59</td>
+     <td style="text-align: center; padding: 8px;">99.13	</td>
+     <td style="text-align: center; padding: 8px;">2.08	</td>
+     <td style="text-align: center; padding: 8px;">93.84	</td>
+     <td style="text-align: center; padding: 8px;">94.67	</td>
+     <td style="text-align: center; padding: 8px;">71.45	</td>
+     <td style="text-align: center; padding: 8px;">91.69</td>
    </tr>
    <tr style="border-bottom: 1px solid black;">
      <td style="text-align: center; padding: 8px;">0</td>
-     <td style="text-align: center; padding: 8px; color: green;">99.15</td>
-     <td style="text-align: center; padding: 8px; color: green;">2.04</td>
-     <td style="text-align: center; padding: 8px; color: green;">94.22</td>
-     <td style="text-align: center; padding: 8px; color: green;">94.42</td>
-     <td style="text-align: center; padding: 8px; color: green;">71.72</td>
-     <td style="text-align: center; padding: 8px; color: green;">91.74</td>
+     <td style="text-align: center; padding: 8px; color: green;">99.11	</td>
+     <td style="text-align: center; padding: 8px; color: green;">2.14	</td>
+     <td style="text-align: center; padding: 8px; color: green;">94.10	</td>
+     <td style="text-align: center; padding: 8px; color: green;">94.09	</td>
+     <td style="text-align: center; padding: 8px; color: green;">70.40	</td>
+     <td style="text-align: center; padding: 8px; color: green;">91.23</td>
    </tr>
    <tr>
      <td rowspan="3" style="text-align: center; padding: 8px;">0.0001</td>
      <td style="text-align: center; padding: 8px;">0.4</td>
-     <td style="text-align: center; padding: 8px;">98.97</td>
-     <td style="text-align: center; padding: 8px;">2.56</td>
-     <td style="text-align: center; padding: 8px;">92.88</td>
-     <td style="text-align: center; padding: 8px;">93.41</td>
-     <td style="text-align: center; padding: 8px;">67.58</td>
-     <td style="text-align: center; padding: 8px;">90.03</td>
+     <td style="text-align: center; padding: 8px;">98.98	</td>
+     <td style="text-align: center; padding: 8px;">2.50	</td>
+     <td style="text-align: center; padding: 8px;">93.08	</td>
+     <td style="text-align: center; padding: 8px;">93.39	</td>
+     <td style="text-align: center; padding: 8px;">67.95	</td>
+     <td style="text-align: center; padding: 8px;">90.06</td>
    </tr>
    <tr>
      <td style="text-align: center; padding: 8px;">0.2</td>
-     <td style="text-align: center; padding: 8px;">98.98</td>
-     <td style="text-align: center; padding: 8px;">2.54</td>
-     <td style="text-align: center; padding: 8px;">92.76</td>
-     <td style="text-align: center; padding: 8px;">93.68</td>
-     <td style="text-align: center; padding: 8px;">67.69</td>
-     <td style="text-align: center; padding: 8px;">90.15</td>
+     <td style="text-align: center; padding: 8px;">98.97	</td>
+     <td style="text-align: center; padding: 8px;">2.56	</td>
+     <td style="text-align: center; padding: 8px;">93.39	</td>
+     <td style="text-align: center; padding: 8px;">92.79	</td>
+     <td style="text-align: center; padding: 8px;">66.78	</td>
+     <td style="text-align: center; padding: 8px;">89.74</td>
+   </tr>
+   <tr style="border-bottom: 2px solid black;">
+     <td style="text-align: center; padding: 8px;">0</td>
+     <td style="text-align: center; padding: 8px;">99.01	</td>
+     <td style="text-align: center; padding: 8px;">2.44	</td>
+     <td style="text-align: center; padding: 8px;">92.93	</td>
+     <td style="text-align: center; padding: 8px;">93.94	</td>
+     <td style="text-align: center; padding: 8px;">67.95	</td>
+     <td style="text-align: center; padding: 8px;">90.05</td>
+   </tr>
+ </tbody>
+</table>
+</div>
+
+<h4 align="center">U-Net + FPN Accuracy vs Loss Graph, Dice Coefficient, and IoU Graph With 0.001 Learning Rate and 0.4 Dropout</h4>
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/a86fa9c8-6048-45ac-9e29-16f0b5687442" alt="Image 1" width="200" style="margin: 0 10px;" />
+  <img src="https://github.com/user-attachments/assets/eb80fd22-17bc-4aee-9604-d0cd97a37e75" alt="Image 2" width="200" style="margin: 0 10px;" />
+  <img src="https://github.com/user-attachments/assets/17a48b95-8c25-4e6c-83a2-0f495eb4a673" alt="Image 3" width="200" style="margin: 0 10px;" />
+  <img src="https://github.com/user-attachments/assets/64121e50-176e-469f-9149-60f103afb7b8" alt="Image 4" width="200" style="margin: 0 10px;" />
+</p>
+
+<h4 align="center">U-Net + FPN Model Result on Random Selected Image: Ground Truth vs Predicted Mask</h4>
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/7d7cc313-8a9d-4c27-880e-ccb2b2823021" alt="Image 1" width="200" style="margin: 0 10px;" />
+  <img src="https://github.com/user-attachments/assets/06e82708-024c-49d8-b055-e3d9fbd014d2" alt="Image 2" width="200" style="margin: 0 10px;" />
+  <img src="https://github.com/user-attachments/assets/962e075a-4143-4af9-9e8f-2a7c2dffcb38" alt="Image 3" width="200" style="margin: 0 10px;" />
+</p>
+
+<p align="justify">
+While the FPN integration yielded a modest improvement in dice coefficient and accuracy, further enhancement was achieved through the implementation of GELU activation functions within the FPN blocks. The transition from ReLU to GELU activation was motivated by several theoretical advantages in gradient handling and feature integration. GELU provides probabilistic smooth transitions based on input magnitude, preserving nuanced gradients crucial for multi-scale feature map generation, and enabling more refined learning of feature dependencies.
+</p>
+
+<p align="justify">
+The feature integration benefits of GELU activation manifested in balanced feature processing across resolution scales, improved fusion of semantic and spatial features, and reduced potential feature redundancy through smoother activation patterns. The scale-specific optimization strategy retained ReLU in basic U-Net blocks for efficient down/up sampling while implementing GELU in FPN blocks for enhanced multi-scale feature handling. This hybrid approach resulted in improved handling of varying feature magnitudes across scales, contributing to the overall enhancement of the segmentation performance.
+</p>
+
+<p align="justify">
+The combination of FPN architecture and GELU activation resulted in enhanced segmentation performance, particularly in challenging cases involving overlapping cells. This improvement can be attributed to the architecture's improved capability to maintain both semantic and spatial information across multiple scales while ensuring smooth feature integration through appropriate activation functions.
+</p>
+
+<div align="center">
+  <h4>Experimental Results of the U-Net + FPN model with GELU Activation in the Encoder</h4>
+</div>
+
+<div align="center">
+<table>
+ <thead>
+   <tr style="border-top: 2px solid black; border-bottom: 1px solid black;">
+     <th colspan="2" style="text-align: center; padding: 8px;">Parameters</th>
+     <th colspan="6" style="text-align: center; padding: 8px;">Segmentation Report on Test Score</th>
+   </tr>
+   <tr style="border-bottom: 2px solid black;">
+     <th style="text-align: center; padding: 8px;">Learning Rate</th>
+     <th style="text-align: center; padding: 8px;">Dropout</th>
+     <th style="text-align: center; padding: 8px;">Accuracy</th>
+     <th style="text-align: center; padding: 8px;">Loss</th>
+     <th style="text-align: center; padding: 8px;">Precision</th>
+     <th style="text-align: center; padding: 8px;">Recall</th>
+     <th style="text-align: center; padding: 8px;">IoU Score</th>
+     <th style="text-align: center; padding: 8px;">Dice Coefficient</th>
+   </tr>
+ </thead>
+ <tbody>
+   <tr>
+     <td rowspan="3" style="text-align: center; padding: 8px;">0.1</td>
+     <td style="text-align: center; padding: 8px;">0.4</td>
+     <td style="text-align: center; padding: 8px;">92.07</td>
+     <td style="text-align: center; padding: 8px;"><span style="color: red;">NaN</span></td>
+     <td style="text-align: center; padding: 8px;">0.00</td>
+     <td style="text-align: center; padding: 8px;">0.00</td>
+     <td style="text-align: center; padding: 8px;"><span style="color: red;">NaN</span></td>
+     <td style="text-align: center; padding: 8px;"><span style="color: red;">NaN</span></td>
+   </tr>
+   <tr>
+     <td style="text-align: center; padding: 8px;">0.2</td>
+     <td style="text-align: center; padding: 8px;">92.07</td>
+     <td style="text-align: center; padding: 8px;"><span style="color: red;">NaN</span></td>
+     <td style="text-align: center; padding: 8px;">0.00</td>
+     <td style="text-align: center; padding: 8px;">0.00</td>
+     <td style="text-align: center; padding: 8px;"><span style="color: red;">NaN</span></td>
+     <td style="text-align: center; padding: 8px;"><span style="color: red;">NaN</span></td>
+   </tr>
+   <tr style="border-bottom: 1px solid black;">
+     <td style="text-align: center; padding: 8px;">0</td>
+     <td style="text-align: center; padding: 8px;">92.07</td>
+     <td style="text-align: center; padding: 8px;"><span style="color: red;">NaN</span></td>
+     <td style="text-align: center; padding: 8px;">0.00</td>
+     <td style="text-align: center; padding: 8px;">0.00</td>
+     <td style="text-align: center; padding: 8px;"><span style="color: red;">NaN</span></td>
+     <td style="text-align: center; padding: 8px;"><span style="color: red;">NaN</span></td>
+   </tr>
+   <tr>
+     <td rowspan="3" style="text-align: center; padding: 8px;">0.01</td>
+     <td style="text-align: center; padding: 8px;">0.4</td>
+     <td style="text-align: center; padding: 8px;">98.72</td>
+     <td style="text-align: center; padding: 8px;">3.13</td>
+     <td style="text-align: center; padding: 8px;">91.68</td>
+     <td style="text-align: center; padding: 8px;">91.23</td>
+     <td style="text-align: center; padding: 8px;">63.85</td>
+     <td style="text-align: center; padding: 8px;">87.56</td>
+   </tr>
+   <tr>
+     <td style="text-align: center; padding: 8px;">0.2</td>
+     <td style="text-align: center; padding: 8px;">98.78</td>
+     <td style="text-align: center; padding: 8px;">3.02</td>
+     <td style="text-align: center; padding: 8px;">91.74</td>
+     <td style="text-align: center; padding: 8px;">92.03</td>
+     <td style="text-align: center; padding: 8px;">65.01</td>
+     <td style="text-align: center; padding: 8px;">88.04</td>
+   </tr>
+   <tr style="border-bottom: 1px solid black;">
+     <td style="text-align: center; padding: 8px;">0</td>
+     <td style="text-align: center; padding: 8px;">97.37</td>
+     <td style="text-align: center; padding: 8px;">6.11</td>
+     <td style="text-align: center; padding: 8px;">79.42</td>
+     <td style="text-align: center; padding: 8px;">87.73</td>
+     <td style="text-align: center; padding: 8px;">51.18</td>
+     <td style="text-align: center; padding: 8px;">75.29</td>
+   </tr>
+   <tr>
+     <td rowspan="3" style="text-align: center; padding: 8px; color: green;"><b>0.001</b></td>
+     <td style="text-align: center; padding: 8px;">0.4</td>
+     <td style="text-align: center; padding: 8px;">99.10</td>
+     <td style="text-align: center; padding: 8px;">2.18</td>
+     <td style="text-align: center; padding: 8px;">93.54</td>
+     <td style="text-align: center; padding: 8px;">94.52</td>
+     <td style="text-align: center; padding: 8px;">70.78</td>
+     <td style="text-align: center; padding: 8px;">91.37</td>
+   </tr>
+   <tr>
+     <td style="text-align: center; padding: 8px;">0.2</td>
+     <td style="text-align: center; padding: 8px;">99.13</td>
+     <td style="text-align: center; padding: 8px;">2.08</td>
+     <td style="text-align: center; padding: 8px;">94.15</td>
+     <td style="text-align: center; padding: 8px;">94.32</td>
+     <td style="text-align: center; padding: 8px;">71.09</td>
+     <td style="text-align: center; padding: 8px;">91.55</td>
+   </tr>
+   <tr style="border-bottom: 1px solid black;">
+     <td style="text-align: center; padding: 8px;"><b>0</b></td>
+     <td style="text-align: center; padding: 8px; color: green;"><b>99.17</b></td>
+     <td style="text-align: center; padding: 8px; color: green;"><b>1.99</b></td>
+     <td style="text-align: center; padding: 8px; color: green;"><b>94.46</b></td>
+     <td style="text-align: center; padding: 8px; color: green;"><b>94.43</b></td>
+     <td style="text-align: center; padding: 8px; color: green;"><b>72.31</b></td>
+     <td style="text-align: center; padding: 8px; color: green;"><b>92.05</b></td>
+   </tr>
+   <tr>
+     <td rowspan="3" style="text-align: center; padding: 8px;">0.0001</td>
+     <td style="text-align: center; padding: 8px;">0.4</td>
+     <td style="text-align: center; padding: 8px;">98.95</td>
+     <td style="text-align: center; padding: 8px;">2.61</td>
+     <td style="text-align: center; padding: 8px;">92.71</td>
+     <td style="text-align: center; padding: 8px;">93.35</td>
+     <td style="text-align: center; padding: 8px;">67.43</td>
+     <td style="text-align: center; padding: 8px;">89.80</td>
+   </tr>
+   <tr>
+     <td style="text-align: center; padding: 8px;">0.2</td>
+     <td style="text-align: center; padding: 8px;">98.96</td>
+     <td style="text-align: center; padding: 8px;">2.57</td>
+     <td style="text-align: center; padding: 8px;">92.71</td>
+     <td style="text-align: center; padding: 8px;">93.54</td>
+     <td style="text-align: center; padding: 8px;">67.90</td>
+     <td style="text-align: center; padding: 8px;">89.98</td>
    </tr>
    <tr style="border-bottom: 2px solid black;">
      <td style="text-align: center; padding: 8px;">0</td>
      <td style="text-align: center; padding: 8px;">98.95</td>
      <td style="text-align: center; padding: 8px;">2.61</td>
-     <td style="text-align: center; padding: 8px;">92.85</td>
-     <td style="text-align: center; padding: 8px;">93.24</td>
-     <td style="text-align: center; padding: 8px;">67.58</td>
-     <td style="text-align: center; padding: 8px;">90.03</td>
+     <td style="text-align: center; padding: 8px;">92.92</td>
+     <td style="text-align: center; padding: 8px;">93.16</td>
+     <td style="text-align: center; padding: 8px;">67.88</td>
+     <td style="text-align: center; padding: 8px;">89.95</td>
    </tr>
  </tbody>
 </table>
 </div>
+
+<h4 align="center">U-Net + FPN with GELU Activation Accuracy vs Loss Graph, Dice Coefficient, and IoU Graph With 0.001 Learning Rate and 0 Dropout</h4>
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/2af287fb-93f1-48e5-9c38-ce1909fc1968" alt="Image 1" width="200" style="margin: 0 10px;" />
+  <img src="https://github.com/user-attachments/assets/0c377f0e-3983-4d4e-b9d7-544753411fb2" alt="Image 2" width="200" style="margin: 0 10px;" />
+  <img src="https://github.com/user-attachments/assets/c37bd904-e927-49fe-bde3-34c12f069581" alt="Image 3" width="200" style="margin: 0 10px;" />
+  <img src="https://github.com/user-attachments/assets/6713a0fd-d09a-4310-ac92-da4f0f4405b5" alt="Image 4" width="200" style="margin: 0 10px;" />
+</p>
+
+<h4 align="center">U-Net + FPN with GELU Activation Model Result on Random Selected Image: Ground Truth vs Predicted Mask</h4>
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/4d204e89-a514-4175-8c90-6020b11546b8" alt="Image 1" width="200" style="margin: 0 10px;" />
+  <img src="https://github.com/user-attachments/assets/f90bc7c1-f508-492a-bcd0-e59ab8dbe142" alt="Image 2" width="200" style="margin: 0 10px;" />
+  <img src="https://github.com/user-attachments/assets/7d79ee35-8b27-4a0e-96e6-387ecb77e81d" alt="Image 3" width="200" style="margin: 0 10px;" />
+</p>
+
+## Conclusion
+<p align="center">
+This study aimed to improve the early detection of Acute Lymphoblastic Leukemia (ALL) in children in Indonesia through the application of deep learning techniques. The results underscore the potential of advanced Convolutional Neural Network (CNN) architectures for both classification and segmentation tasks in the analysis of blood smear images.
+</p>
+
+<p align="center">
+For the classification task, data loading configurations were found to significantly influence model performance. The Single Global Dataset Creation (SGDC) approach outperformed class-specific data preparation by offering better randomization, computational efficiency, and statistical integrity. Among the various CNN architectures tested, InceptionResNetV2 was the most effective for detecting subtle morphological changes indicative of leukemia, outperforming NASNetLarge due to its superior feature extraction capabilities and efficient training dynamics. This highlights the importance of choosing the right deep learning model architecture for detecting complex patterns in moderate-sized medical datasets.
+</p>
+
+<p align="center">
+For segmentation, the baseline U-Net model proved effective but struggled with overlapping cells, a common challenge in blood smear images. To address this, the integration of Feature Pyramid Networks (FPN) and GELU activations enhanced the model's ability to represent multi-scale and semantic-spatial features. This hybrid architecture resulted in significantly improved segmentation accuracy, as demonstrated by higher dice coefficient scores, particularly in complex cases involving lymphoblasts and erythrocytes.
+</p>
+
+<p align="center">
+The study also revealed that model regularization techniques, such as dropout, and the optimization of learning rates were critical to enhancing model accuracy and robustness. These hyperparameters played a pivotal role in preventing overfitting and ensuring that the model could generalize effectively, thus improving its performance on real-world medical data. Further tuning of hyperparameters such as batch size and dropout rates showed promise in refining the model’s sensitivity and specificity for ALL detection.
+</p>
+
+<p align="center">
+The evaluation metrics, including sensitivity, specificity, and overall diagnostic accuracy, demonstrated the deep learning models' superior performance compared to traditional diagnostic methods, particularly in early-stage detection. This improvement is crucial for minimizing misdiagnosis and ensuring timely treatment. The results indicate that the proposed approach can complement and enhance traditional diagnostic techniques, offering a more reliable and scalable solution for ALL detection in resource-constrained settings like Indonesia.
+</p>
+
+<p align="center">
+The methodology employed in this research proved to be robust, and the results achieved were convincing. The study makes a significant contribution to the application of deep learning for leukemia detection, serving as an excellent reference for future similar studies. With its comprehensive approach and promising outcomes, this research demonstrates the efficacy of combining deep learning techniques with tailored architectural enhancements to significantly improve the accuracy and reliability of ALL detection. These findings contribute to advancing computational diagnostic tools, offering the potential to reduce misdiagnosis and expedite treatment in the clinical setting.
+</p>
