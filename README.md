@@ -193,7 +193,7 @@ The classification task necessitates a systematic approach to data organization,
 
 ### Results and Analysis
 <p align="justify">
-From all these tables it shows 48 experiments comparing InceptionResNetV2 and NASNetLarge architectures for classification. The experiments were performed using a Kaggle notebook with P100 GPU, maintaining consistent parameters across all trials: batch size of 32, 60 epochs, and Adam optimizer. The primary variables investigated were learning rate, dropout rate, and data loading configurations.
+All these tables shows 48 experiments comparing InceptionResNetV2 and NASNetLarge architectures for classification. The experiments were performed using a Kaggle notebook with P100 GPU, maintaining consistent parameters across all trials: batch size of 32, 60 epochs, and Adam optimizer. The primary variables investigated were learning rate, dropout rate, and data loading configurations.
 </p>
 
 <div align="center">
@@ -875,7 +875,7 @@ From all these tables it shows 48 experiments comparing InceptionResNetV2 and NA
       <td style="text-align: center">12.44</td>
     </tr>
     <tr>
-      <td rowspan="3" style="text-align: center"><b>0.0001</b></td>
+      <td rowspan="3" style="text-align: center">0.0001</td>
       <td style="text-align: center">0.4</td>
       <td style="text-align: center">0.95</td>
       <td style="text-align: center">0.95</td>
@@ -1142,7 +1142,9 @@ This evolution reflects the ongoing challenge in deep learning: balancing model 
 </p>
 
 ## Segmentation Task
+  
 ### Data Preprocessing
-### Results and Analysis
 
-## Result
+### Results and Analysis
+<p align="justify"> All these tables shows 36 experiments to optimize U-Net architecture for segmentation. The experiments were performed using a Kaggle notebook with P100 GPU, maintaining consistent parameters across all trials: batch size of 32, 60 epochs, and Adam optimizer. The primary variables investigated were learning rate, dropout rate, and data loading configurations.
+</p>
