@@ -2,14 +2,15 @@
 
 ## Situation
 <p align="justify"> 
-Childhood cancer represents a significant global public health challenge, with increasing incidence rates annually [1]. Among pediatric malignancies, Acute Lymphoblastic Leukemia (ALL) emerges as the predominant form, accounting for 30% of all childhood cancers in the United States, with an annual incidence of 3.5 per 100,000 children [2]. In Indonesia, ALL maintains similar prevalence patterns, with an incidence rate of 2.5-4.0 per 100,000 children, translating to approximately 2,000-3,200 new cases annually [3].</p>
-
-<p align="justify">
-The disparity in survival outcomes between high-income countries (HICs) and low- and middle-income countries (LMICs) is particularly striking. While HICs like the United States and European nations report 5-year survival rates approaching 90% [4], Southeast Asian countries demonstrate significantly lower rates, with Malaysia at 69.4% and Thailand at 55.1% [4]. Indonesia faces particularly challenging outcomes, with reported 5-year survival rates of 28.9% and 31.8% at major medical centers [5,6]. These disparities are attributed to multiple factors, including high relapse rates, treatment abandonment, delayed diagnosis, and limited healthcare accessibility [7].
+Childhood cancer represents a significant global public health challenge, with increasing incidence rates annually <a href="https://gh.bmj.com/content/bmjgh/4/5/e001825.full.pdf">[1]</a>. Among pediatric malignancies, Acute Lymphoblastic Leukemia (ALL) emerges as the predominant form, accounting for 30% of all childhood cancers in the United States, with an annual incidence of 3.5 per 100,000 children <a href="https://seer.cancer.gov/archive/csr/1975_2017/results_merged/sect_28_childhood_cancer.pdf">[2]</a>. In Indonesia, ALL maintains similar prevalence patterns, with an incidence rate of 2.5-4.0 per 100,000 children, translating to approximately 2,000-3,200 new cases annually <a href="https://ejournal.unsrat.ac.id/index.php/eclinic/article/view/11693">[3]</a>.
 </p>
 
 <p align="justify">
-Current diagnostic approaches in Indonesia primarily rely on clinical and hematological parameters, including age, leukocyte count, and conventional morphological examination of bone marrow. While advanced molecular techniques like PCR-based detection of BCR-ABL1 fusion genes have enhanced diagnostic capabilities [8], the implementation of comprehensive genetic testing remains limited due to resource constraints. Although high-resolution genomic technologies have revolutionized ALL diagnosis in HICs, their high cost and infrastructure requirements make them impractical for routine use in LMICs [9].
+The disparity in survival outcomes between high-income countries (HICs) and low- and middle-income countries (LMICs) is particularly striking. While HICs like the United States and European nations report 5-year survival rates approaching 90% <a href="https://pubmed.ncbi.nlm.nih.gov/30169285/">[4]</a>, Southeast Asian countries demonstrate significantly lower rates, with Malaysia at 69.4% and Thailand at 55.1% <a href="https://pubmed.ncbi.nlm.nih.gov/30169285/">[4]</a>. Indonesia faces particularly challenging outcomes, with reported 5-year survival rates of 28.9% and 31.8% at major medical centers <a href="https://media.neliti.com/media/publications-test/64084-perbedaan-kesintasan-5-tahun-pasien-leuk-a9b6f46a.pdf">[5]</a><a href="https://paediatricaindonesiana.org/index.php/paediatrica-indonesiana/article/view/2164">[6]</a>. These disparities are attributed to multiple factors, including high relapse rates, treatment abandonment, delayed diagnosis, and limited healthcare accessibility <a href="https://pubmed.ncbi.nlm.nih.gov/25202926/">[7]</a>.
+</p>
+
+<p align="justify">
+Current diagnostic approaches in Indonesia primarily rely on clinical and hematological parameters, including age, leukocyte count, and conventional morphological examination of bone marrow. While advanced molecular techniques like PCR-based detection of BCR-ABL1 fusion genes have enhanced diagnostic capabilities <a href="https://www.indonesianjournalofcancer.or.id/e-journal/index.php/ijoc/article/view/729">[8]</a>, the implementation of comprehensive genetic testing remains limited due to resource constraints. Although high-resolution genomic technologies have revolutionized ALL diagnosis in HICs, their high cost and infrastructure requirements make them impractical for routine use in LMICs <a href="https://pubmed.ncbi.nlm.nih.gov/24319240/">[9]</a>.
 </p>
 
 <p align="justify">  
@@ -1662,26 +1663,26 @@ The combination of FPN architecture and GELU activation resulted in enhanced seg
 </p>
 
 ## Conclusion
-<p align="center">
+<p align="justify">
 This study aimed to improve the early detection of Acute Lymphoblastic Leukemia (ALL) in children in Indonesia through the application of deep learning techniques. The results underscore the potential of advanced Convolutional Neural Network (CNN) architectures for both classification and segmentation tasks in the analysis of blood smear images.
 </p>
 
-<p align="center">
+<p align="justify">
 For the classification task, data loading configurations were found to significantly influence model performance. The Single Global Dataset Creation (SGDC) approach outperformed class-specific data preparation by offering better randomization, computational efficiency, and statistical integrity. Among the various CNN architectures tested, InceptionResNetV2 was the most effective for detecting subtle morphological changes indicative of leukemia, outperforming NASNetLarge due to its superior feature extraction capabilities and efficient training dynamics. This highlights the importance of choosing the right deep learning model architecture for detecting complex patterns in moderate-sized medical datasets.
 </p>
 
-<p align="center">
+<p align="justify">
 For segmentation, the baseline U-Net model proved effective but struggled with overlapping cells, a common challenge in blood smear images. To address this, the integration of Feature Pyramid Networks (FPN) and GELU activations enhanced the model's ability to represent multi-scale and semantic-spatial features. This hybrid architecture resulted in significantly improved segmentation accuracy, as demonstrated by higher dice coefficient scores, particularly in complex cases involving lymphoblasts and erythrocytes.
 </p>
 
-<p align="center">
+<p align="justify">
 The study also revealed that model regularization techniques, such as dropout, and the optimization of learning rates were critical to enhancing model accuracy and robustness. These hyperparameters played a pivotal role in preventing overfitting and ensuring that the model could generalize effectively, thus improving its performance on real-world medical data. Further tuning of hyperparameters such as batch size and dropout rates showed promise in refining the model’s sensitivity and specificity for ALL detection.
 </p>
 
-<p align="center">
+<p align="justify">
 The evaluation metrics, including sensitivity, specificity, and overall diagnostic accuracy, demonstrated the deep learning models' superior performance compared to traditional diagnostic methods, particularly in early-stage detection. This improvement is crucial for minimizing misdiagnosis and ensuring timely treatment. The results indicate that the proposed approach can complement and enhance traditional diagnostic techniques, offering a more reliable and scalable solution for ALL detection in resource-constrained settings like Indonesia.
 </p>
 
-<p align="center">
+<p align="justify">
 The methodology employed in this research proved to be robust, and the results achieved were convincing. The study makes a significant contribution to the application of deep learning for leukemia detection, serving as an excellent reference for future similar studies. With its comprehensive approach and promising outcomes, this research demonstrates the efficacy of combining deep learning techniques with tailored architectural enhancements to significantly improve the accuracy and reliability of ALL detection. These findings contribute to advancing computational diagnostic tools, offering the potential to reduce misdiagnosis and expedite treatment in the clinical setting.
 </p>
