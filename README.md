@@ -1116,7 +1116,10 @@ The fundamental concept of CNNs, though implemented over three decades ago, gain
 CNNs effectively address these challenges by leveraging two key characteristics of image data. The first is feature localization, which describes the correlation between adjacent pixels in representing semantic features. The second is feature independence of location, which refers to the invariance of feature significance regardless of spatial position.
 </p>
 
-<h4 align="center">CNN Architecture Evolution </h4>
+<h4 align="center">
+CNN Seen from Neural Network Perspective <a href="https://arxiv.org/pdf/1706.09077">[10]</a>
+</h4>
+
 <p align="center">
   <img src="https://github.com/user-attachments/assets/4130cd06-716e-46a3-9f6d-6e0d40e84ff1" />
 </p>
@@ -1133,7 +1136,10 @@ This progression contextualizes our experimental findings, where InceptionResNet
 The superior performance of InceptionResNetV2 in this study of leukemia classification task, as detailed in a figure below, suggests that architecture engineering approaches remain highly relevant for specific applications, particularly with moderate-sized datasets. However, the future trajectory of CNN development appears oriented toward AutoML methodologies, despite their current limitations in computational requirements.
 </p>
 
-<h4 align="center">CNN Architecture Evolution </h4>
+<h4 align="center">
+CNN Architecture Evolution <a href="https://medium.com/data-science/from-alexnet-to-nasnet-a-brief-history-and-introduction-of-convolutional-neural-networks-cf63bf3320e1">[11]</a>
+</h4>
+
 <p align="center">
   <img src="https://github.com/user-attachments/assets/7f5a976e-9158-422c-9d98-56fcdcfeb020" />
 </p>
