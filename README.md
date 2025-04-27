@@ -1174,3 +1174,304 @@ The preprocessing pipeline incorporates image standardization through resizing o
 ### Results and Analysis
 <p align="justify"> All these tables shows 36 experiments to optimize U-Net architecture for segmentation. The experiments were performed using a Kaggle notebook with P100 GPU, maintaining consistent parameters across all trials: batch size of 32, 60 epochs, and Adam optimizer. The primary variables investigated were learning rate, dropout rate, and data loading configurations.
 </p>
+
+<div align="center">
+  <h4>Experimental Results of the Base U-Net Model</h4>
+</div>
+
+<div align="center">
+<table>
+ <thead>
+   <tr style="border-top: 2px solid black; border-bottom: 1px solid black;">
+     <th colspan="2" style="text-align: center; padding: 8px;">Parameters</th>
+     <th colspan="6" style="text-align: center; padding: 8px;">Segmentation Report on Test Score (%)</th>
+   </tr>
+   <tr style="border-bottom: 1px solid black;">
+     <th style="text-align: center; padding: 8px;">Learning Rate</th>
+     <th style="text-align: center; padding: 8px;">Dropout</th>
+     <th style="text-align: center; padding: 8px;">Accuracy</th>
+     <th style="text-align: center; padding: 8px;">Loss</th>
+     <th style="text-align: center; padding: 8px;">Precision</th>
+     <th style="text-align: center; padding: 8px;">Recall</th>
+     <th style="text-align: center; padding: 8px;">IoU Score</th>
+     <th style="text-align: center; padding: 8px;">Dice Coefficient</th>
+   </tr>
+ </thead>
+ <tbody>
+   <tr>
+     <td rowspan="3" style="text-align: center; padding: 8px;">0.1</td>
+     <td style="text-align: center; padding: 8px;">0.4</td>
+     <td style="text-align: center; padding: 8px;">92.49</td>
+     <td style="text-align: center; padding: 8px;"><span style="color: red;">NaN</span></td>
+     <td style="text-align: center; padding: 8px;">0.00</td>
+     <td style="text-align: center; padding: 8px;">0.00</td>
+     <td style="text-align: center; padding: 8px;"><span style="color: red;">NaN</span></td>
+     <td style="text-align: center; padding: 8px;"><span style="color: red;">NaN</span></td>
+   </tr>
+   <tr>
+     <td style="text-align: center; padding: 8px;">0.2</td>
+     <td style="text-align: center; padding: 8px;">92.49</td>
+     <td style="text-align: center; padding: 8px;"><span style="color: red;">NaN</span></td>
+     <td style="text-align: center; padding: 8px;">0.00</td>
+     <td style="text-align: center; padding: 8px;">0.00</td>
+     <td style="text-align: center; padding: 8px;"><span style="color: red;">NaN</span></td>
+     <td style="text-align: center; padding: 8px;"><span style="color: red;">NaN</span></td>
+   </tr>
+   <tr style="border-bottom: 1px solid black;">
+     <td style="text-align: center; padding: 8px;">0</td>
+     <td style="text-align: center; padding: 8px;">92.49</td>
+     <td style="text-align: center; padding: 8px;"><span style="color: red;">NaN</span></td>
+     <td style="text-align: center; padding: 8px;">0.00</td>
+     <td style="text-align: center; padding: 8px;">0.00</td>
+     <td style="text-align: center; padding: 8px;"><span style="color: red;">NaN</span></td>
+     <td style="text-align: center; padding: 8px;"><span style="color: red;">NaN</span></td>
+   </tr>
+   <tr>
+     <td rowspan="3" style="text-align: center; padding: 8px;">0.01</td>
+     <td style="text-align: center; padding: 8px;">0.4</td>
+     <td style="text-align: center; padding: 8px;">93.73</td>
+     <td style="text-align: center; padding: 8px;">15.16</td>
+     <td style="text-align: center; padding: 8px;">64.55</td>
+     <td style="text-align: center; padding: 8px;">36.51</td>
+     <td style="text-align: center; padding: 8px;">18.29</td>
+     <td style="text-align: center; padding: 8px;">37.62</td>
+   </tr>
+   <tr>
+     <td style="text-align: center; padding: 8px;">0.2</td>
+     <td style="text-align: center; padding: 8px;">97.25</td>
+     <td style="text-align: center; padding: 8px;">6.44</td>
+     <td style="text-align: center; padding: 8px;">77.05</td>
+     <td style="text-align: center; padding: 8px;">90.23</td>
+     <td style="text-align: center; padding: 8px;">48.37</td>
+     <td style="text-align: center; padding: 8px;">72.55</td>
+   </tr>
+   <tr style="border-bottom: 1px solid black;">
+     <td style="text-align: center; padding: 8px;">0</td>
+     <td style="text-align: center; padding: 8px;">98.70</td>
+     <td style="text-align: center; padding: 8px;">3.29</td>
+     <td style="text-align: center; padding: 8px;">91.26</td>
+     <td style="text-align: center; padding: 8px;">91.46</td>
+     <td style="text-align: center; padding: 8px;">63.80</td>
+     <td style="text-align: center; padding: 8px;">87.55</td>
+   </tr>
+   <tr>
+     <td rowspan="3" style="text-align: center; padding: 8px; color: green;"><b>0.001</b></td>
+     <td style="text-align: center; padding: 8px;">0.4</td>
+     <td style="text-align: center; padding: 8px;">99.13</td>
+     <td style="text-align: center; padding: 8px;">2.09</td>
+     <td style="text-align: center; padding: 8px;">94.06</td>
+     <td style="text-align: center; padding: 8px;">94.32</td>
+     <td style="text-align: center; padding: 8px;">71.37</td>
+     <td style="text-align: center; padding: 8px;">91.55</td>
+   </tr>
+   <tr>
+     <td style="text-align: center; padding: 8px;">0.2</td>
+     <td style="text-align: center; padding: 8px;">99.14</td>
+     <td style="text-align: center; padding: 8px;">2.04</td>
+     <td style="text-align: center; padding: 8px;">94.07</td>
+     <td style="text-align: center; padding: 8px;">94.56</td>
+     <td style="text-align: center; padding: 8px;">71.32</td>
+     <td style="text-align: center; padding: 8px;">91.59</td>
+   </tr>
+   <tr style="border-bottom: 1px solid black;">
+     <td style="text-align: center; padding: 8px;"><b>0</b></td>
+     <td style="text-align: center; padding: 8px; color: green;"><b>99.15</b></td>
+     <td style="text-align: center; padding: 8px; color: green;"><b>2.04</b></td>
+     <td style="text-align: center; padding: 8px; color: green;"><b>94.22</b></td>
+     <td style="text-align: center; padding: 8px; color: green;"><b>94.42</b></td>
+     <td style="text-align: center; padding: 8px; color: green;"><b>71.72</b></td>
+     <td style="text-align: center; padding: 8px; color: green;"><b>91.74</b></td>
+   </tr>
+   <tr>
+     <td rowspan="3" style="text-align: center; padding: 8px;">0.0001</td>
+     <td style="text-align: center; padding: 8px;">0.4</td>
+     <td style="text-align: center; padding: 8px;">98.97</td>
+     <td style="text-align: center; padding: 8px;">2.56</td>
+     <td style="text-align: center; padding: 8px;">92.88</td>
+     <td style="text-align: center; padding: 8px;">93.41</td>
+     <td style="text-align: center; padding: 8px;">67.58</td>
+     <td style="text-align: center; padding: 8px;">90.03</td>
+   </tr>
+   <tr>
+     <td style="text-align: center; padding: 8px;">0.2</td>
+     <td style="text-align: center; padding: 8px;">98.98</td>
+     <td style="text-align: center; padding: 8px;">2.54</td>
+     <td style="text-align: center; padding: 8px;">92.76</td>
+     <td style="text-align: center; padding: 8px;">93.68</td>
+     <td style="text-align: center; padding: 8px;">67.69</td>
+     <td style="text-align: center; padding: 8px;">90.15</td>
+   </tr>
+   <tr style="border-bottom: 2px solid black;">
+     <td style="text-align: center; padding: 8px;">0</td>
+     <td style="text-align: center; padding: 8px;">98.95</td>
+     <td style="text-align: center; padding: 8px;">2.61</td>
+     <td style="text-align: center; padding: 8px;">92.85</td>
+     <td style="text-align: center; padding: 8px;">93.24</td>
+     <td style="text-align: center; padding: 8px;">67.58</td>
+     <td style="text-align: center; padding: 8px;">90.03</td>
+   </tr>
+ </tbody>
+</table>
+</div>
+
+<h4 align="center">U-Net Accuracy vs Loss Graph, Dice Coefficient, and IoU Graph With 0.001 Learning Rate and 0 Dropout</h4>
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/a86fa9c8-6048-45ac-9e29-16f0b5687442" alt="Image 1" width="200" style="margin: 0 10px;" />
+  <img src="https://github.com/user-attachments/assets/eb80fd22-17bc-4aee-9604-d0cd97a37e75" alt="Image 2" width="200" style="margin: 0 10px;" />
+  <img src="https://github.com/user-attachments/assets/17a48b95-8c25-4e6c-83a2-0f495eb4a673" alt="Image 3" width="200" style="margin: 0 10px;" />
+  <img src="https://github.com/user-attachments/assets/64121e50-176e-469f-9149-60f103afb7b8" alt="Image 4" width="200" style="margin: 0 10px;" />
+</p>
+
+<h4 align="center">U-Net Model Result on Random Selected Image: Ground Truth vs Predicted Mask</h4>
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/0ef8a6f4-a52e-486f-ae02-03dc0e53e346" alt="Image 3" width="200" style="margin: 0 10px;" />
+  <img src="https://github.com/user-attachments/assets/28750e53-1bfc-434b-9feb-a56b55da01d7" alt="Image 4" width="200" style="margin: 0 10px;" />
+  <img src="https://github.com/user-attachments/assets/520716d3-42b9-4611-8b0f-9330bfdaf949" alt="Image 3" width="200" style="margin: 0 10px;" />
+</p>
+
+<p align="justify">
+The baseline U-Net model achieved promising initial results with high accuracy and dice coefficient scores, demonstrating good convergence characteristics in the Accuracy vs Loss graph. However, significant performance degradation was observed in specific scenarios, as evidenced by the substantial drop in dice score shown in the third image. This degradation primarily occurred in cases involving overlapping cells, where the model struggled to accurately segment lymphoblasts in the presence of erythrocytes.
+</p>
+
+<p align="justify">
+The performance limitations of the standard U-Net architecture stemmed from its restricted capacity for multi-scale context representation. As the encoder down samples, global contextual features can be lost due to the focus on increasingly localized patterns, particularly affecting the segmentation of objects with varying sizes or those spread across the image. To address these limitations, the study implemented a Feature Pyramid Network (FPN) within the encoder segment of the U-Net architecture. The FPN integration was motivated to enhance the model's multi-scale feature representation capabilities. As described by Lin et al. (2017) in their seminal work on Feature Pyramid Networks for Object Detection, the FPN constructs a semantically rich pyramid of feature maps across multiple resolutions. This architecture utilizes lateral connections to merge high-level semantic features with low-level spatial details, while its top-down pathway progressively refines and integrates up sampled feature maps.
+</p>
+
+<div align="center">
+  <h4>Experimental Results of the U-Net + FPN Model in the Encoder</h4>
+</div>
+
+<div align="center">
+<table>
+ <thead>
+   <tr style="border-top: 2px solid black; border-bottom: 1px solid black;">
+     <th colspan="2" style="text-align: center; padding: 8px;">Parameters</th>
+     <th colspan="6" style="text-align: center; padding: 8px;">Segmentation Report on Test Score (%)</th>
+   </tr>
+   <tr style="border-bottom: 1px solid black;">
+     <th style="text-align: center; padding: 8px;">Learning Rate</th>
+     <th style="text-align: center; padding: 8px;">Dropout</th>
+     <th style="text-align: center; padding: 8px;">Accuracy</th>
+     <th style="text-align: center; padding: 8px;">Loss</th>
+     <th style="text-align: center; padding: 8px;">Precision</th>
+     <th style="text-align: center; padding: 8px;">Recall</th>
+     <th style="text-align: center; padding: 8px;">IoU Score</th>
+     <th style="text-align: center; padding: 8px;">Dice Coefficient</th>
+   </tr>
+ </thead>
+ <tbody>
+   <tr>
+     <td rowspan="3" style="text-align: center; padding: 8px;">0.1</td>
+     <td style="text-align: center; padding: 8px;">0.4</td>
+     <td style="text-align: center; padding: 8px;">92.49</td>
+     <td style="text-align: center; padding: 8px;"><span style="color: red;">NaN</span></td>
+     <td style="text-align: center; padding: 8px;">0.00</td>
+     <td style="text-align: center; padding: 8px;">0.00</td>
+     <td style="text-align: center; padding: 8px;"><span style="color: red;">NaN</span></td>
+     <td style="text-align: center; padding: 8px;"><span style="color: red;">NaN</span></td>
+   </tr>
+   <tr>
+     <td style="text-align: center; padding: 8px;">0.2</td>
+     <td style="text-align: center; padding: 8px;">92.49</td>
+     <td style="text-align: center; padding: 8px;"><span style="color: red;">NaN</span></td>
+     <td style="text-align: center; padding: 8px;">0.00</td>
+     <td style="text-align: center; padding: 8px;">0.00</td>
+     <td style="text-align: center; padding: 8px;"><span style="color: red;">NaN</span></td>
+     <td style="text-align: center; padding: 8px;"><span style="color: red;">NaN</span></td>
+   </tr>
+   <tr style="border-bottom: 1px solid black;">
+     <td style="text-align: center; padding: 8px;">0</td>
+     <td style="text-align: center; padding: 8px;">92.49</td>
+     <td style="text-align: center; padding: 8px;"><span style="color: red;">NaN</span></td>
+     <td style="text-align: center; padding: 8px;">0.00</td>
+     <td style="text-align: center; padding: 8px;">0.00</td>
+     <td style="text-align: center; padding: 8px;"><span style="color: red;">NaN</span></td>
+     <td style="text-align: center; padding: 8px;"><span style="color: red;">NaN</span></td>
+   </tr>
+   <tr>
+     <td rowspan="3" style="text-align: center; padding: 8px;">0.01</td>
+     <td style="text-align: center; padding: 8px;">0.4</td>
+     <td style="text-align: center; padding: 8px;">93.73</td>
+     <td style="text-align: center; padding: 8px;">15.16</td>
+     <td style="text-align: center; padding: 8px;">64.55</td>
+     <td style="text-align: center; padding: 8px;">36.51</td>
+     <td style="text-align: center; padding: 8px;">18.29</td>
+     <td style="text-align: center; padding: 8px;">37.62</td>
+   </tr>
+   <tr>
+     <td style="text-align: center; padding: 8px;">0.2</td>
+     <td style="text-align: center; padding: 8px;">97.25</td>
+     <td style="text-align: center; padding: 8px;">6.44</td>
+     <td style="text-align: center; padding: 8px;">77.05</td>
+     <td style="text-align: center; padding: 8px;">90.23</td>
+     <td style="text-align: center; padding: 8px;">48.37</td>
+     <td style="text-align: center; padding: 8px;">72.55</td>
+   </tr>
+   <tr style="border-bottom: 1px solid black;">
+     <td style="text-align: center; padding: 8px;">0</td>
+     <td style="text-align: center; padding: 8px;">98.70</td>
+     <td style="text-align: center; padding: 8px;">3.29</td>
+     <td style="text-align: center; padding: 8px;">91.26</td>
+     <td style="text-align: center; padding: 8px;">91.46</td>
+     <td style="text-align: center; padding: 8px;">63.80</td>
+     <td style="text-align: center; padding: 8px;">87.55</td>
+   </tr>
+   <tr>
+     <td rowspan="3" style="text-align: center; padding: 8px; color: green;">0.001</td>
+     <td style="text-align: center; padding: 8px;">0.4</td>
+     <td style="text-align: center; padding: 8px;">99.13</td>
+     <td style="text-align: center; padding: 8px;">2.09</td>
+     <td style="text-align: center; padding: 8px;">94.06</td>
+     <td style="text-align: center; padding: 8px;">94.32</td>
+     <td style="text-align: center; padding: 8px;">71.37</td>
+     <td style="text-align: center; padding: 8px;">91.55</td>
+   </tr>
+   <tr>
+     <td style="text-align: center; padding: 8px;">0.2</td>
+     <td style="text-align: center; padding: 8px;">99.14</td>
+     <td style="text-align: center; padding: 8px;">2.04</td>
+     <td style="text-align: center; padding: 8px;">94.07</td>
+     <td style="text-align: center; padding: 8px;">94.56</td>
+     <td style="text-align: center; padding: 8px;">71.32</td>
+     <td style="text-align: center; padding: 8px;">91.59</td>
+   </tr>
+   <tr style="border-bottom: 1px solid black;">
+     <td style="text-align: center; padding: 8px;">0</td>
+     <td style="text-align: center; padding: 8px; color: green;">99.15</td>
+     <td style="text-align: center; padding: 8px; color: green;">2.04</td>
+     <td style="text-align: center; padding: 8px; color: green;">94.22</td>
+     <td style="text-align: center; padding: 8px; color: green;">94.42</td>
+     <td style="text-align: center; padding: 8px; color: green;">71.72</td>
+     <td style="text-align: center; padding: 8px; color: green;">91.74</td>
+   </tr>
+   <tr>
+     <td rowspan="3" style="text-align: center; padding: 8px;">0.0001</td>
+     <td style="text-align: center; padding: 8px;">0.4</td>
+     <td style="text-align: center; padding: 8px;">98.97</td>
+     <td style="text-align: center; padding: 8px;">2.56</td>
+     <td style="text-align: center; padding: 8px;">92.88</td>
+     <td style="text-align: center; padding: 8px;">93.41</td>
+     <td style="text-align: center; padding: 8px;">67.58</td>
+     <td style="text-align: center; padding: 8px;">90.03</td>
+   </tr>
+   <tr>
+     <td style="text-align: center; padding: 8px;">0.2</td>
+     <td style="text-align: center; padding: 8px;">98.98</td>
+     <td style="text-align: center; padding: 8px;">2.54</td>
+     <td style="text-align: center; padding: 8px;">92.76</td>
+     <td style="text-align: center; padding: 8px;">93.68</td>
+     <td style="text-align: center; padding: 8px;">67.69</td>
+     <td style="text-align: center; padding: 8px;">90.15</td>
+   </tr>
+   <tr style="border-bottom: 2px solid black;">
+     <td style="text-align: center; padding: 8px;">0</td>
+     <td style="text-align: center; padding: 8px;">98.95</td>
+     <td style="text-align: center; padding: 8px;">2.61</td>
+     <td style="text-align: center; padding: 8px;">92.85</td>
+     <td style="text-align: center; padding: 8px;">93.24</td>
+     <td style="text-align: center; padding: 8px;">67.58</td>
+     <td style="text-align: center; padding: 8px;">90.03</td>
+   </tr>
+ </tbody>
+</table>
+</div>
