@@ -1142,8 +1142,34 @@ This evolution reflects the ongoing challenge in deep learning: balancing model 
 </p>
 
 ## Segmentation Task
-  
+<p align="justify">
+Image segmentation methodologies can be broadly categorized into two fundamental approaches: traditional image processing techniques, exemplified by HSV thresholding, and deep learning-based methods, represented by architectures such as U-Net. These approaches differ significantly in their underlying principles and capabilities for image analysis.
+</p>
+
+<p align="justify">
+HSV thresholding represents a classical image processing approach that operates by transforming images into the HSV (Hue, Saturation, Value) color space and applying specific threshold parameters to isolate desired color ranges. This methodology demonstrates particular efficacy in controlled environments where target objects exhibit consistent color characteristics, as the HSV color space effectively decouples color information (Hue) from illumination components (Saturation and Value). However, this approach exhibits inherent limitations in handling environmental variations such as illumination changes, color inconsistencies, or image noise. Furthermore, its reliance on color-based discrimination restricts its capability to incorporate other critical features such as morphological characteristics, textural properties, or spatial relationships.
+</p>
+
+<p align="justify">
+In contrast, U-Net architecture represents an advanced convolutional neural network specifically optimized for image segmentation tasks. This deep learning approach facilitates comprehensive feature learning, encompassing color distributions, textural patterns, morphological characteristics, and spatial correlations, through supervised training with annotated image-mask pairs. The architecture's learning capability enables it to identify complex segmentation patterns based on pixel-wise feature analysis without requiring explicit threshold specifications. U-Net demonstrates superior adaptability to varying image conditions and environmental factors, such as illumination variations and object appearance modifications, enhancing its applicability across diverse real-world scenarios.
+</p>
+
+<p align="justify">
+While HSV thresholding offers simplicity and effectiveness for color-based segmentation in controlled environments, U-Net's sophisticated feature learning capabilities and robust performance across variable conditions establish it as a more comprehensive solution for complex segmentation challenges. This enhanced adaptability and feature recognition capability position U-Net as the preferred methodology for addressing advanced segmentation requirements in dynamic and challenging imaging scenarios.
+</p>
+
 ### Data Preprocessing
+<p align="justify">
+The data loading process implements a streamlined approach utilizing two comprehensive global lists for storing images and their corresponding segmentation masks. This unified storage methodology optimizes dataset preparation by eliminating the complexity of managing class-specific directories or individual class datasets. Given that the primary objective focuses on area segmentation rather than classification (which is addressed separately by the classification model), the masks are processed as binary representations. This binary segmentation approach enables focused identification of regions of interest, independent of class-specific characteristics.
+</p>
+
+<p align="justify">
+The preprocessing pipeline incorporates image standardization through resizing operations and normalization procedures, while masks undergo binary conversion to ensure dataset uniformity. Following the preprocessing phase, the dataset undergoes a global shuffling procedure before being partitioned into training (70%), validation (15%), and test (15%) sets. This systematic approach ensures random distribution while maintaining efficient data management protocols. Figure below shows a random selected images from the original image of Acute Lymphoblastic Leukemia and its masking.
+</p>
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/b5efd2ba-1fc7-4c9d-b9b5-a01543721125" />
+</p>
 
 ### Results and Analysis
 <p align="justify"> All these tables shows 36 experiments to optimize U-Net architecture for segmentation. The experiments were performed using a Kaggle notebook with P100 GPU, maintaining consistent parameters across all trials: batch size of 32, 60 epochs, and Adam optimizer. The primary variables investigated were learning rate, dropout rate, and data loading configurations.
