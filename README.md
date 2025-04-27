@@ -838,7 +838,7 @@ From all these tables it shows 48 experiments comparing InceptionResNetV2 and NA
       <td style="text-align: center">14.79</td>
     </tr>
     <tr>
-      <td rowspan="3" style="text-align: center">0.001</td>
+      <td rowspan="3" style="text-align: center"><b>0.001</b></td>
       <td style="text-align: center">0.4</td>
       <td style="text-align: center">0.96</td>
       <td style="text-align: center">0.96</td>
@@ -851,16 +851,16 @@ From all these tables it shows 48 experiments comparing InceptionResNetV2 and NA
       <td style="text-align: center">11.63</td>
     </tr>
     <tr>
-      <td style="text-align: center">0.2</td>
-      <td style="text-align: center">0.97</td>
-      <td style="text-align: center">0.97</td>
-      <td style="text-align: center">0.97</td>
-      <td style="text-align: center">99.75	</td>
-      <td style="text-align: center">1.67	</td>
-      <td style="text-align: center">96.83	</td>
-      <td style="text-align: center">11.92	</td>
-      <td style="text-align: center">96.67	</td>
-      <td style="text-align: center">11.66</td>
+      <td style="text-align: center"><b>0.2</b></td>
+      <td style="text-align: center"><b>0.97</b></td>
+      <td style="text-align: center"><b>0.97</b></td>
+      <td style="text-align: center"><b>0.97</b></td>
+      <td style="text-align: center"><b>99.75</b></td>
+      <td style="text-align: center"><b>1.67</b></td>
+      <td style="text-align: center"><b>96.83</b></td>
+      <td style="text-align: center"><b>11.92</b></td>
+      <td style="text-align: center"><b>96.67</b></td>
+      <td style="text-align: center"><b>11.66</b></td>
     </tr>
     <tr>
       <td style="text-align: center">0</td>
@@ -900,16 +900,16 @@ From all these tables it shows 48 experiments comparing InceptionResNetV2 and NA
       <td style="text-align: center">12.18</td>
     </tr>
     <tr>
-      <td style="text-align: center"><b>0</b></td>
-      <td style="text-align: center"><b>0.97	</b></td>
-      <td style="text-align: center"><b>0.96</b></td>
-      <td style="text-align: center"><b>0.96</b></td>
-      <td style="text-align: center"><b>99.50	</b></td>
-      <td style="text-align: center"><b>2.67	</b></td>
-      <td style="text-align: center"><b>96.50	</b></td>
-      <td style="text-align: center"><b>11.60	</b></td>
-      <td style="text-align: center"><b>95.00	</b></td>
-      <td style="text-align: center"><b>11.58</b></td>
+      <td style="text-align: center">0</td>
+      <td style="text-align: center">0.97</td>
+      <td style="text-align: center">0.96</td>
+      <td style="text-align: center">0.96</td>
+      <td style="text-align: center">99.50</td>
+      <td style="text-align: center">2.67</td>
+      <td style="text-align: center">96.50</td>
+      <td style="text-align: center">11.60</td>
+      <td style="text-align: center">95.00</td>
+      <td style="text-align: center">11.58</td>
     </tr>
   </tbody>
 </table>
@@ -979,18 +979,18 @@ All these table shows that the experimental results demonstrate that InceptionRe
 </div>
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/f1396a18-d8c7-4f0a-a254-d69b02704b63" width="250" style="margin: 0 10px;" />
-  <img src="https://github.com/user-attachments/assets/ec3cafe7-dd1a-4afb-b6f1-eb040b9348dd" width="250" style="margin: 0 10px;" />
+  <img src="https://github.com/user-attachments/assets/f1396a18-d8c7-4f0a-a254-d69b02704b63" width="400" style="margin: 0 10px;" />
+  <img src="https://github.com/user-attachments/assets/ec3cafe7-dd1a-4afb-b6f1-eb040b9348dd" width="400" style="margin: 0 10px;" />
 </p>
 
 <p align="justify">
 Initial experiments with InceptionResNetV2 as it shown in a figure above promising accuracy but exhibited overfitting tendencies, particularly when implemented without dropout (dropout rate = 0). To address this, the model was fine-tuned by adjusting the dropout rate to 0.1 while maintaining the original learning rate. The optimization process yielded significant improvements in model stability, culminating in an impressive accuracy of 98.16%. This enhanced performance is comprehensively documented through multiple evaluation metrics, as illustrated in a figure below, which displays the relationship between accuracy and loss across training epochs. 
 </p>
 
-<h4 align="center">Final Optimized InceptionResNetV2 Model Accuracy vs Loss graph with a Learning Rate of 0.0001 and a Dropout Rate of 0.1.</h4>
+<h4 align="center">Final Optimized InceptionResNetV2 Model Accuracy vs Loss graph with a Learning Rate of 0.0001 and a Dropout Rate of 0.1</h4>
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/1e071f66-ec69-4fd4-af2a-c823e7e046d6" width="250" style="margin: 0 10px;" />
-  <img src="https://github.com/user-attachments/assets/83da6fc8-052c-43f0-8cba-b060c210c73b" width="250" style="margin: 0 10px;" />
+  <img src="https://github.com/user-attachments/assets/1e071f66-ec69-4fd4-af2a-c823e7e046d6" width="400" style="margin: 0 10px;" />
+  <img src="https://github.com/user-attachments/assets/83da6fc8-052c-43f0-8cba-b060c210c73b" width="400" style="margin: 0 10px;" />
 </p>
 
 <div align="center">
