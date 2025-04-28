@@ -1489,10 +1489,10 @@ As described by Lin et al. (2017) in their seminal work on Feature Pyramid Netwo
 
 <h4 align="center">U-Net + FPN Accuracy vs Loss Graph, Dice Coefficient, and IoU Graph With 0.001 Learning Rate and 0.4 Dropout</h4>
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/a86fa9c8-6048-45ac-9e29-16f0b5687442" alt="Image 1" width="200" style="margin: 0 10px;" />
-  <img src="https://github.com/user-attachments/assets/eb80fd22-17bc-4aee-9604-d0cd97a37e75" alt="Image 2" width="200" style="margin: 0 10px;" />
-  <img src="https://github.com/user-attachments/assets/17a48b95-8c25-4e6c-83a2-0f495eb4a673" alt="Image 3" width="200" style="margin: 0 10px;" />
-  <img src="https://github.com/user-attachments/assets/64121e50-176e-469f-9149-60f103afb7b8" alt="Image 4" width="200" style="margin: 0 10px;" />
+  <img src="https://github.com/user-attachments/assets/af73a089-dc55-4f89-8340-cf26d14578d0" alt="Image 1" width="200" style="margin: 0 10px;" />
+  <img src="https://github.com/user-attachments/assets/42a31f71-deb1-4624-afd5-99c66f7171b1" alt="Image 2" width="200" style="margin: 0 10px;" />
+  <img src="https://github.com/user-attachments/assets/f6705878-295d-4b03-81a9-eb97e09fc848" alt="Image 3" width="200" style="margin: 0 10px;" />
+  <img src="https://github.com/user-attachments/assets/bb5f4e3c-8e91-4d6d-921a-e13a3426a16a" alt="Image 4" width="200" style="margin: 0 10px;" />
 </p>
 
 <h4 align="center">U-Net + FPN Model Result on Random Selected Image: Ground Truth vs Predicted Mask</h4>
