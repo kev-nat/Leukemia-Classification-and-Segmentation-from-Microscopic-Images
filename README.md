@@ -995,7 +995,7 @@ Initial experiments with InceptionResNetV2 as it shown in a figure above promisi
 </p>
 
 <div align="center">
-  <h4>Final Optimized InceptionResNetV2 Classification Report</h4>
+  <h4>Final Optimized InceptionResNetV2 Classification Report and Confusion Matrix</h4>
 </div>
 
 <div align="center">
@@ -1062,11 +1062,52 @@ Initial experiments with InceptionResNetV2 as it shown in a figure above promisi
     </tr>
   </tbody>
 </table>
+
+<table>
+  <tr>
+    <td colspan="2" rowspan="2"></td>
+    <td colspan="4" align="center"><b>Predicted Classification</b></td>
+  </tr>
+  <tr>
+    <td align="center"><b>Benign</b></td>
+    <td align="center"><b>Early</b></td>
+    <td align="center"><b>Pre</b></td>
+    <td align="center"><b>Pro</b></td>
+  </tr>
+  <tr>
+    <td rowspan="4"><b>Actual<br>Classification</b></td>
+    <td align="center"><b>Benign</b></td>
+    <td align="center">142</td>
+    <td align="center">5</td>
+    <td align="center">0</td>
+    <td align="center">2</td>
+  </tr>
+  <tr>
+    <td align="center"><b>Early</b></td>
+    <td align="center">2</td>
+    <td align="center">139</td>
+    <td align="center">1</td>
+    <td align="center">0</td>
+  </tr>
+  <tr>
+    <td align="center"><b>Pre</b></td>
+    <td align="center">0</td>
+    <td align="center">0</td>
+    <td align="center">148</td>
+    <td align="center">1</td>
+  </tr>
+  <tr>
+    <td align="center"><b>Pro</b></td>
+    <td align="center">0</td>
+    <td align="center">0</td>
+    <td align="center">0</td>
+    <td align="center">160</td>
+  </tr>
+</table>
 </div>
 
-<h4 align="center">Final Optimized InceptionResNetV2 Confusion Matrix & ROC Curves</h4>
+<h4 align="center">Final Optimized InceptionResNetV2 ROC Curves</h4>
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/ce872d0e-0180-4830-951f-cabba7a00831" width="400" style="margin: 0 10px;" />
   <img src="https://github.com/user-attachments/assets/eebb1c6a-e5fe-4d8b-8b25-49a19b2cf1a3" width="400" style="margin: 0 10px;" />
 </p>
 
