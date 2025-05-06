@@ -1232,6 +1232,12 @@ The preprocessing pipeline incorporates image standardization through resizing o
 <p align="justify"> All these tables shows 36 experiments to optimize U-Net architecture for segmentation. The experiments were performed using a Kaggle notebook with P100 GPU, maintaining consistent parameters across all trials: batch size of 32, 60 epochs, and Adam optimizer. The primary variables investigated were learning rate, dropout rate, and data loading configurations.
 </p>
 
+<h4 align="center">U-NET and U-NET + FPN Model Architecture Used in this Study</h4>
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/ba3dc843-a0d5-4db4-9dd2-bb42fb544d55" width="350" style="margin: 0 10px;" />
+  <img src="https://github.com/user-attachments/assets/0ff46ea1-2fd4-47c8-85ab-4c5f0b973a5f" width="300" style="margin: 0 10px;" />
+</p>
+
 <div align="center">
   <h4>Experimental Results of the Base U-Net Model</h4>
 </div>
