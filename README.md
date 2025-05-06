@@ -1234,7 +1234,7 @@ The preprocessing pipeline incorporates image standardization through resizing o
 
 <h4 align="center">U-NET and U-NET + FPN Model Architecture Used in this Study</h4>
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/ba3dc843-a0d5-4db4-9dd2-bb42fb544d55" width="350" style="margin: 0 10px;" />
+  <img src="https://github.com/user-attachments/assets/ba3dc843-a0d5-4db4-9dd2-bb42fb544d55" width="380" style="margin: 0 10px;" />
   <img src="https://github.com/user-attachments/assets/0ff46ea1-2fd4-47c8-85ab-4c5f0b973a5f" width="300" style="margin: 0 10px;" />
 </p>
 
