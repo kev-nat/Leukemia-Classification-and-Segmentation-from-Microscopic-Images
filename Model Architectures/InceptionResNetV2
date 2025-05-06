@@ -1,0 +1,118 @@
+\documentclass[border=15pt, multi, tikz]{standalone}
+\usepackage{import}
+\subimport{../layers/}{init}
+\usetikzlibrary{positioning}
+
+\def\ConvColor{rgb:yellow,5;red,2.5;white,5}
+\def\ConvReluColor{rgb:yellow,5;red,5;white,5}
+\def\PoolColor{rgb:red,1;black,0.3}
+\def\DropoutColor{rgb:green,2;black,0.3}
+\def\FcColor{rgb:blue,5;red,2.5;white,5}
+\def\FcReluColor{rgb:blue,5;red,5;white,4}
+\def\SoftmaxColor{rgb:magenta,5;black,7}
+
+\begin{document}
+\begin{tikzpicture}
+\tikzstyle{connection}=[ultra thick,every node/.style={sloped,allow upside down},draw=\edgecolor,opacity=0.7]
+
+%% Layer Blocks for InceptionResNetV2
+% Input layer
+\pic[shift={(0,0,0)}] at (0,0,0) {RightBandedBox={name=input,caption=Input,%
+        xlabel={{"3",""}},ylabel=224,zlabel=224,fill=\ConvColor,bandfill=\ConvReluColor,%
+        height=40,width=2,depth=40}};
+
+% InceptionResNetV2 base model - represented as multiple convolutional blocks
+\pic[shift={(2,0,0)}] at (input-east) {RightBandedBox={name=stem,caption=Stem,%
+        xlabel={{"64","64","64"}},zlabel=112,fill=\ConvColor,bandfill=\ConvReluColor,%
+        height=38,width={3,3,3},depth=38}};
+
+\pic[shift={(1,0,0)}] at (stem-east) {RightBandedBox={name=incept1,caption=Inception-A,%
+        xlabel={{"32","32","32","32"}},zlabel=56,fill=\ConvColor,bandfill=\ConvReluColor,%
+        height=36,width={4,4,4,4},depth=36}};
+
+\pic[shift={(1,0,0)}] at (incept1-east) {RightBandedBox={name=incept2,caption=Inception-B,%
+        xlabel={{"128","160","192"}},zlabel=28,fill=\ConvColor,bandfill=\ConvReluColor,%
+        height=30,width={5,5,5},depth=30}};
+
+\pic[shift={(1,0,0)}] at (incept2-east) {RightBandedBox={name=incept3,caption=Inception-C,%
+        xlabel={{"192","224","256"}},zlabel=14,fill=\ConvColor,bandfill=\ConvReluColor,%
+        height=25,width={5,5,5},depth=25}};
+
+\pic[shift={(1,0,0)}] at (incept3-east) {Box={name=end_base,%
+        caption=1536 features,fill=\PoolColor,opacity=0.5,height=20,width=2,depth=5}};
+
+% Global Average Pooling Layer
+\pic[shift={(1.5,0,0)}] at (end_base-east) {Box={name=gap,%
+        caption=GlobalAveragePooling2D,fill=\PoolColor,opacity=0.5,height=20,width=2,depth=20}};
+
+% First Dropout Layer
+\pic[shift={(2,0,0)}] at (gap-east) {Box={name=drop1,%
+        caption=Dropout,fill=\DropoutColor,opacity=0.5,height=15,width=1.5,depth=15}};
+
+% Dense Layer with ReLU activation
+\pic[shift={(2,0,0)}] at (drop1-east) {RightBandedBox={name=fc1,caption=fc1,%
+        xlabel={{"1",""}},zlabel=256,fill=\FcColor,bandfill=\FcReluColor,%
+        height=3,width=3,depth=30}};
+
+% Second Dropout Layer
+\pic[shift={(1.5,0,0)}] at (fc1-east) {Box={name=drop2,%
+        caption=Dropout,fill=\DropoutColor,opacity=0.5,height=3,width=1.5,depth=25}};
+
+% Output Layer with Softmax activation
+\pic[shift={(1.5,0,0)}] at (drop2-east) {RightBandedBox={name=fc2,caption=output,%
+        xlabel={{"1",""}},zlabel=4,fill=\FcColor,bandfill=\SoftmaxColor,%
+        height=3,width=3,depth=20}};
+
+% Arrow Connections
+\draw [connection]  (input-east)     -- node {\midarrow} (stem-west);
+\draw [connection]  (stem-east)      -- node {\midarrow} (incept1-west);
+\draw [connection]  (incept1-east)   -- node {\midarrow} (incept2-west);
+\draw [connection]  (incept2-east)   -- node {\midarrow} (incept3-west);
+\draw [connection]  (incept3-east)   -- node {\midarrow} (end_base-west);
+\draw [connection]  (end_base-east)  -- node {\midarrow} (gap-west);
+\draw [connection]  (gap-east)       -- node {\midarrow} (drop1-west);
+\draw [connection]  (drop1-east)     -- node {\midarrow} (fc1-west);
+\draw [connection]  (fc1-east)       -- node {\midarrow} (drop2-west);
+\draw [connection]  (drop2-east)     -- node {\midarrow} (fc2-west);
+\draw [connection]  (fc2-east)       -- node {\midarrow} ++(1.5,0,0);
+
+
+% Draw Dotted Edges for dimension transitions
+\draw[densely dashed]
+    (end_base-west)++(0, 1.5*.2, 1.5*.2) coordinate(a) -- (incept3-nearnortheast)
+    (end_base-west)++(0,-1.5*.2, 1.5*.2) coordinate(b) -- (incept3-nearsoutheast)
+    (end_base-west)++(0,-1.5*.2,-1.5*.2) coordinate(c) -- (incept3-farsoutheast)
+    (end_base-west)++(0, 1.5*.2,-1.5*.2) coordinate(d) -- (incept3-farnortheast)
+    
+    (a)--(b)--(c)--(d)
+    ;
+
+\draw[densely dashed]
+    (gap-west)++(0, 1.5*.2, 1.5*.2) coordinate(a) -- (end_base-nearnortheast)
+    (gap-west)++(0,-1.5*.2, 1.5*.2) coordinate(b) -- (end_base-nearsoutheast)
+    (gap-west)++(0,-1.5*.2,-1.5*.2) coordinate(c) -- (end_base-farsoutheast)
+    (gap-west)++(0, 1.5*.2,-1.5*.2) coordinate(d) -- (end_base-farnortheast)
+    
+    (a)--(b)--(c)--(d)
+    ;
+
+\draw[densely dashed]
+    (fc1-west)++(0, 1.5*.2, 1.5*.2) coordinate(a) -- (drop1-nearnortheast)
+    (fc1-west)++(0,-1.5*.2, 1.5*.2) coordinate(b) -- (drop1-nearsoutheast)
+    (fc1-west)++(0,-1.5*.2,-1.5*.2) coordinate(c) -- (drop1-farsoutheast)
+    (fc1-west)++(0, 1.5*.2,-1.5*.2) coordinate(d) -- (drop1-farnortheast)
+    
+    (a)--(b)--(c)--(d)
+    ;
+
+\draw[densely dashed]
+    (fc2-west)++(0, 1.5*.2, 1.5*.2) coordinate(a) -- (drop2-nearnortheast)
+    (fc2-west)++(0,-1.5*.2, 1.5*.2) coordinate(b) -- (drop2-nearsoutheast)
+    (fc2-west)++(0,-1.5*.2,-1.5*.2) coordinate(c) -- (drop2-farsoutheast)
+    (fc2-west)++(0, 1.5*.2,-1.5*.2) coordinate(d) -- (drop2-farnortheast)
+    
+    (a)--(b)--(c)--(d)
+    ;
+
+\end{tikzpicture}
+\end{document}
