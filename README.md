@@ -1,5 +1,7 @@
 # Leukemia Classification and Segmentation from Microscopic Images
 
+https://github.com/user-attachments/assets/02fdfeae-970f-4dd7-a90e-1cc654c95a4d
+
 ## Situation
 <p align="justify"> 
 Childhood cancer represents a significant global public health challenge, with increasing incidence rates annually <a href="https://gh.bmj.com/content/bmjgh/4/5/e001825.full.pdf">[1]</a>. Among pediatric malignancies, Acute Lymphoblastic Leukemia (ALL) emerges as the predominant form, accounting for 30% of all childhood cancers in the United States, with an annual incidence of 3.5 per 100,000 children <a href="https://seer.cancer.gov/archive/csr/1975_2017/results_merged/sect_28_childhood_cancer.pdf">[2]</a>. In Indonesia, ALL maintains similar prevalence patterns, with an incidence rate of 2.5-4.0 per 100,000 children, translating to approximately 2,000-3,200 new cases annually <a href="https://ejournal.unsrat.ac.id/index.php/eclinic/article/view/11693">[3]</a>.
