@@ -201,8 +201,8 @@ All these tables shows 48 experiments comparing InceptionResNetV2 and NASNetLarg
 
 <h4 align="center">InceptionResNetV2 and NASNetLarge Model Architecture Used in this Study</h4>
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/ed2eb669-1481-408f-a7ee-4db463725b9e" width="480" style="margin: 0 10px;" />
-  <img src="https://github.com/user-attachments/assets/1c328692-fbcf-4886-af97-928985b529a0" width="420" style="margin: 0 10px;" />
+  <img src="https://github.com/user-attachments/assets/ed2eb669-1481-408f-a7ee-4db463725b9e" width="350" style="margin: 0 10px;" />
+  <img src="https://github.com/user-attachments/assets/1c328692-fbcf-4886-af97-928985b529a0" width="300" style="margin: 0 10px;" />
 </p>
 
 
