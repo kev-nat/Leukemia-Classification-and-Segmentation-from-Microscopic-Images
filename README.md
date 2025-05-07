@@ -1167,11 +1167,11 @@ CNNs effectively address these challenges by leveraging two key characteristics 
 </p>
 
 <h4 align="center">
-CNN Seen from Neural Network Perspective <a href="https://arxiv.org/pdf/1706.09077">[10]</a>
+CNN from Neural Network Perspective <a href="https://arxiv.org/pdf/1706.09077">[10]</a>
 </h4>
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/4130cd06-716e-46a3-9f6d-6e0d40e84ff1" />
+  <img src="https://github.com/user-attachments/assets/4130cd06-716e-46a3-9f6d-6e0d40e84ff1" width="350" style="margin: 0 10px;" />
 </p>
 
 <p align="justify">
@@ -1191,7 +1191,7 @@ CNN Architecture Evolution <a href="https://medium.com/data-science/from-alexnet
 </h4>
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/7f5a976e-9158-422c-9d98-56fcdcfeb020" />
+  <img src="https://github.com/user-attachments/assets/7f5a976e-9158-422c-9d98-56fcdcfeb020" width="400" style="margin: 0 10px;" />
 </p>
 
 <p align="justify">
