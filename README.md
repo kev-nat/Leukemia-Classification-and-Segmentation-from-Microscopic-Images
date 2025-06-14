@@ -2,23 +2,6 @@
 
 https://github.com/user-attachments/assets/02fdfeae-970f-4dd7-a90e-1cc654c95a4d
 
-## Situation
-<p align="justify"> 
-Childhood cancer represents a significant global public health challenge, with increasing incidence rates annually <a href="https://gh.bmj.com/content/bmjgh/4/5/e001825.full.pdf">[1]</a>. Among pediatric malignancies, Acute Lymphoblastic Leukemia (ALL) emerges as the predominant form, accounting for 30% of all childhood cancers in the United States, with an annual incidence of 3.5 per 100,000 children <a href="https://seer.cancer.gov/archive/csr/1975_2017/results_merged/sect_28_childhood_cancer.pdf">[2]</a>. In Indonesia, ALL maintains similar prevalence patterns, with an incidence rate of 2.5-4.0 per 100,000 children, translating to approximately 2,000-3,200 new cases annually <a href="https://ejournal.unsrat.ac.id/index.php/eclinic/article/view/11693">[3]</a>.
-</p>
-
-<p align="justify">
-The disparity in survival outcomes between high-income countries (HICs) and low- and middle-income countries (LMICs) is particularly striking. While HICs like the United States and European nations report 5-year survival rates approaching 90% <a href="https://pubmed.ncbi.nlm.nih.gov/30169285/">[4]</a>, Southeast Asian countries demonstrate significantly lower rates, with Malaysia at 69.4% and Thailand at 55.1% <a href="https://pubmed.ncbi.nlm.nih.gov/30169285/">[4]</a>. Indonesia faces particularly challenging outcomes, with reported 5-year survival rates of 28.9% and 31.8% at major medical centers <a href="https://media.neliti.com/media/publications-test/64084-perbedaan-kesintasan-5-tahun-pasien-leuk-a9b6f46a.pdf">[5]</a><a href="https://paediatricaindonesiana.org/index.php/paediatrica-indonesiana/article/view/2164">[6]</a>. These disparities are attributed to multiple factors, including high relapse rates, treatment abandonment, delayed diagnosis, and limited healthcare accessibility <a href="https://pubmed.ncbi.nlm.nih.gov/25202926/">[7]</a>.
-</p>
-
-<p align="justify">
-Current diagnostic approaches in Indonesia primarily rely on clinical and hematological parameters, including age, leukocyte count, and conventional morphological examination of bone marrow. While advanced molecular techniques like PCR-based detection of BCR-ABL1 fusion genes have enhanced diagnostic capabilities <a href="https://www.indonesianjournalofcancer.or.id/e-journal/index.php/ijoc/article/view/729">[8]</a>, the implementation of comprehensive genetic testing remains limited due to resource constraints. Although high-resolution genomic technologies have revolutionized ALL diagnosis in HICs, their high cost and infrastructure requirements make them impractical for routine use in LMICs <a href="https://pubmed.ncbi.nlm.nih.gov/24319240/">[9]</a>.
-</p>
-
-<p align="justify">  
-The integration of deep learning techniques with Peripheral Blood Smear (PBS) image analysis presents a promising alternative diagnostic approach. This methodology offers several advantages: it is non-invasive, cost-effective, and capable of detecting subtle morphological abnormalities indicative of leukemia. The application of Convolutional Neural Networks (CNNs) to PBS image analysis provides consistent, reproducible results while potentially reducing diagnostic errors and improving early detection capabilities. This approach is particularly relevant for resource-limited settings, where it could enhance diagnostic accuracy and facilitate timely intervention, ultimately contributing to improved survival outcomes for children with ALL.
-</p>
-
 ## Dataset
 <p align="justify"> 
 
@@ -198,13 +181,6 @@ The classification task necessitates a systematic approach to data organization,
 <p align="justify">
 All these tables shows 48 experiments comparing InceptionResNetV2 and NASNetLarge architectures for classification. The experiments were performed using a Kaggle notebook with P100 GPU, maintaining consistent parameters across all trials: batch size of 32, 60 epochs, and Adam optimizer. The primary variables investigated were learning rate, dropout rate, and data loading configurations.
 </p>
-
-<h4 align="center">InceptionResNetV2 and NASNetLarge Model Architecture Used in this Study</h4>
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/ed2eb669-1481-408f-a7ee-4db463725b9e" width="350" style="margin: 0 10px;" />
-  <img src="https://github.com/user-attachments/assets/1c328692-fbcf-4886-af97-928985b529a0" width="300" style="margin: 0 10px;" />
-</p>
-
 
 <div align="center">
   <h4>Experimental Results of the InceptionResNetV2 Model using Data Loading Option 1</h4>
@@ -1153,51 +1129,6 @@ The detailed performance analysis is further substantiated by the classification
   <img src="https://github.com/user-attachments/assets/258476cc-7511-45d0-b044-5b715597780a" alt="Image 4" width="200" style="margin: 0 10px;" />
 </p>
 
-#### Evolution of CNN Architectures: Traditional vs. Modern Approaches
-
-<p align="justify">
-The experimental results observed in this study reflect broader trends in the evolution of Convolutional Neural Networks (CNNs). Since AlexNet's breakthrough performance in the 2012 ImageNet competition, CNN architectures have undergone significant advancement, demonstrating capabilities that frequently surpass human performance in image processing tasks.
-</p>
-
-<p align="justify">
-The fundamental concept of CNNs, though implemented over three decades ago, gained prominence primarily due to two factors: the democratization of computational resources and the availability of large-scale datasets. This evolution has particularly addressed the inherent challenges of image processing, where traditional neural networks faced significant limitations due to high-dimensional input data. For instance, a 1000 × 1000-pixel image presents one million features, requiring approximately 10¹² parameters in a single-layer feed-forward neural network, a scale that poses substantial challenges in terms of both computational resources and potential overfitting.
-
-<p align="justify">
-CNNs effectively address these challenges by leveraging two key characteristics of image data. The first is feature localization, which describes the correlation between adjacent pixels in representing semantic features. The second is feature independence of location, which refers to the invariance of feature significance regardless of spatial position.
-</p>
-
-<h4 align="center">
-CNN from Neural Network Perspective <a href="https://arxiv.org/pdf/1706.09077">[10]</a>
-</h4>
-
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/4130cd06-716e-46a3-9f6d-6e0d40e84ff1" width="350" style="margin: 0 10px;" />
-</p>
-
-<p align="justify">
-These properties are implemented through shared parameters and locally connected networks as it shown above which dramatically reducing the parameter space from 10¹² to 10³ in typical applications. The CNN architecture achieves this efficiency through three primary components: convolution layers, pooling layers, and fully connected layers. The convolution layers implement filters with defined stride patterns for feature extraction, while pooling layers provide feature resilience and parameter reduction through max or average operations. Finally, fully connected layers connect flattened convolutional features to output classifications, completing the network's processing pipeline.
-</p>
-
-<p align="justify">
-This progression contextualizes our experimental findings, where InceptionResNetV2, representing the architecture engineering phase, demonstrated superior performance compared to NASNetLarge, an AutoML-based approach. While NASNetLarge exemplifies the potential of reinforcement learning in architecture design, achieving state-of-the-art results on ImageNet, its implementation requires substantial computational resources that limit its accessibility. 
-</p>
-
-<p align="justify">
-The superior performance of InceptionResNetV2 in this study of leukemia classification task, as detailed in a figure below, suggests that architecture engineering approaches remain highly relevant for specific applications, particularly with moderate-sized datasets. However, the future trajectory of CNN development appears oriented toward AutoML methodologies, despite their current limitations in computational requirements.
-</p>
-
-<h4 align="center">
-CNN Architecture Evolution <a href="https://medium.com/data-science/from-alexnet-to-nasnet-a-brief-history-and-introduction-of-convolutional-neural-networks-cf63bf3320e1">[11]</a>
-</h4>
-
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/7f5a976e-9158-422c-9d98-56fcdcfeb020" width="400" style="margin: 0 10px;" />
-</p>
-
-<p align="justify">
-This evolution reflects the ongoing challenge in deep learning: balancing model complexity, computational efficiency, and generalization capability. While AutoML approaches like NASNetLarge represent the cutting edge of architectural innovation, our results demonstrate that well-engineered traditional architectures can still provide optimal solutions for specific medical imaging applications. This observation is particularly relevant for healthcare implementations where computational resources may be constrained, and dataset sizes are moderate.
-</p>
-
 ## Segmentation Task
 <p align="justify">
 Image segmentation methodologies can be broadly categorized into two fundamental approaches: traditional image processing techniques, exemplified by HSV thresholding, and deep learning-based methods, represented by architectures such as U-Net. These approaches differ significantly in their underlying principles and capabilities for image analysis.
@@ -1230,12 +1161,6 @@ The preprocessing pipeline incorporates image standardization through resizing o
 
 ### Results and Analysis
 <p align="justify"> All these tables shows 36 experiments to optimize U-Net architecture for segmentation. The experiments were performed using a Kaggle notebook with P100 GPU, maintaining consistent parameters across all trials: batch size of 32, 60 epochs, and Adam optimizer. The primary variables investigated were learning rate, dropout rate, and data loading configurations.
-</p>
-
-<h4 align="center">U-NET and U-NET + FPN Model Architecture Used in this Study</h4>
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/ba3dc843-a0d5-4db4-9dd2-bb42fb544d55" width="380" style="margin: 0 10px;" />
-  <img src="https://github.com/user-attachments/assets/0ff46ea1-2fd4-47c8-85ab-4c5f0b973a5f" width="300" style="margin: 0 10px;" />
 </p>
 
 <div align="center">
@@ -1722,29 +1647,4 @@ The combination of FPN architecture and GELU activation resulted in enhanced seg
   <img src="https://github.com/user-attachments/assets/4d204e89-a514-4175-8c90-6020b11546b8" alt="Image 1" width="200" style="margin: 0 10px;" />
   <img src="https://github.com/user-attachments/assets/f90bc7c1-f508-492a-bcd0-e59ab8dbe142" alt="Image 2" width="200" style="margin: 0 10px;" />
   <img src="https://github.com/user-attachments/assets/7d79ee35-8b27-4a0e-96e6-387ecb77e81d" alt="Image 3" width="200" style="margin: 0 10px;" />
-</p>
-
-## Conclusion
-<p align="justify">
-This study aimed to improve the early detection of Acute Lymphoblastic Leukemia (ALL) in children in Indonesia through the application of deep learning techniques. The results underscore the potential of advanced Convolutional Neural Network (CNN) architectures for both classification and segmentation tasks in the analysis of blood smear images.
-</p>
-
-<p align="justify">
-For the classification task, data loading configurations were found to significantly influence model performance. The Single Global Dataset Creation (SGDC) approach outperformed class-specific data preparation by offering better randomization, computational efficiency, and statistical integrity. Among the various CNN architectures tested, InceptionResNetV2 was the most effective for detecting subtle morphological changes indicative of leukemia, outperforming NASNetLarge due to its superior feature extraction capabilities and efficient training dynamics. This highlights the importance of choosing the right deep learning model architecture for detecting complex patterns in moderate-sized medical datasets.
-</p>
-
-<p align="justify">
-For segmentation, the baseline U-Net model proved effective but struggled with overlapping cells, a common challenge in blood smear images. To address this, the integration of Feature Pyramid Networks (FPN) and GELU activations enhanced the model's ability to represent multi-scale and semantic-spatial features. This hybrid architecture resulted in significantly improved segmentation accuracy, as demonstrated by higher dice coefficient scores, particularly in complex cases involving lymphoblasts and erythrocytes.
-</p>
-
-<p align="justify">
-The study also revealed that model regularization techniques, such as dropout, and the optimization of learning rates were critical to enhancing model accuracy and robustness. These hyperparameters played a pivotal role in preventing overfitting and ensuring that the model could generalize effectively, thus improving its performance on real-world medical data. Further tuning of hyperparameters such as batch size and dropout rates showed promise in refining the model’s sensitivity and specificity for ALL detection.
-</p>
-
-<p align="justify">
-The evaluation metrics, including sensitivity, specificity, and overall diagnostic accuracy, demonstrated the deep learning models' superior performance compared to traditional diagnostic methods, particularly in early-stage detection. This improvement is crucial for minimizing misdiagnosis and ensuring timely treatment. The results indicate that the proposed approach can complement and enhance traditional diagnostic techniques, offering a more reliable and scalable solution for ALL detection in resource-constrained settings like Indonesia.
-</p>
-
-<p align="justify">
-The methodology employed in this research proved to be robust, and the results achieved were convincing. The study makes a significant contribution to the application of deep learning for leukemia detection, serving as an excellent reference for future similar studies. With its comprehensive approach and promising outcomes, this research demonstrates the efficacy of combining deep learning techniques with tailored architectural enhancements to significantly improve the accuracy and reliability of ALL detection. These findings contribute to advancing computational diagnostic tools, offering the potential to reduce misdiagnosis and expedite treatment in the clinical setting.
 </p>
