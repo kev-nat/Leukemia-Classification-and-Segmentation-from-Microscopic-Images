@@ -28,12 +28,11 @@ Baseline Model: Started with the well-established U-Net architecture, which is h
 Architectural Enhancements:
 - Integrated a Feature Pyramid Network (FPN) into the U-Net encoder to improve multi-scale feature learning and better handle cells of varying sizes.
 - Replaced standard ReLU activation functions with Gaussian Error Linear Unit (GELU) within the FPN blocks to improve gradient flow and feature integration.
-- Outcome: The resulting hybrid U-Net-FPN with GELU model showed significant improvements in delineating cell boundaries, especially for overlapping cells.
+- The resulting hybrid U-Net-FPN with GELU model showed significant improvements in delineating cell boundaries, especially for overlapping cells.
 
 ## Impacts
 The proposed deep learning pipeline demonstrates a robust, accurate, and scalable solution with significant potential for clinical application.
 
-- **High Accuracy:** The InceptionResNetV2 classification model achieved 98.16% accuracy. The enhanced U-Net-FPN segmentation model reached 99.17% accuracy and a dice score of 92.05%.
-- **State-of-the-Art Performance:** Both models outperformed results from several prominent prior studies, validating the effectiveness of our architectural choices and training methodologies.
-- **Clinical Relevance:** This work provides a foundation for a cost-effective and reliable diagnostic tool that can be deployed in resource-limited settings like Indonesia. By enabling earlier and more accurate detection of ALL, this system has the potential to bridge existing diagnostic gaps and ultimately improve patient outcomes.
-- **Future Work:** The next step is to deploy these models into a practical, web-based application to make the technology accessible to clinicians.
+- The InceptionResNetV2 classification model achieved 98.16% accuracy and the enhanced U-Net-FPN segmentation model reached 99.17% accuracy and a dice score of 92.05%.
+- Both models outperformed results from several prominent prior studies, validating the effectiveness of our architectural choices and training methodologies.
+- Provides a foundation for a cost-effective and reliable diagnostic tool that can be deployed in resource-limited settings like Indonesia. By enabling earlier and more accurate detection of ALL, this system has the potential to bridge existing diagnostic gaps and ultimately improve patient outcomes.
