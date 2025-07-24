@@ -1,4 +1,5 @@
 # Leukemia Classification and Segmentation from Microscopic Images
+This project presents a deep learning pipeline for the early diagnosis of Acute Lymphoblastic Leukemia (ALL) from peripheral blood smear images. It features a comparative study of various CNN architectures to build a robust and accurate system for both classifying and segmenting leukemic cells.
 
 https://github.com/user-attachments/assets/02fdfeae-970f-4dd7-a90e-1cc654c95a4d
 
